@@ -1,4 +1,5 @@
 #pragma once
+//#define LIT_CHECK
 #include <string>
 #include <stdlib.h> 
 #include <cwchar>

@@ -1,0 +1,10 @@
+Test:  without errors 
+
+Test:  without errors 
+---------- Protocol ---------- Date: 08.12.2024 17:38:29
+----------Parametres----------
+-in: In.txt
+-out: In.txt.out
+-log: In.txt.log
+----------Errors----------
+Error 110 Source code file opening error (-in)

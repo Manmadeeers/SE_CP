@@ -10,6 +10,8 @@ namespace IT {
 		newIDTable.size = 0;
 		newIDTable.table = new Entry[size];
 		newIDTable.maxsize = ID_MAXSIZE;
+		newIDTable.lits = new Entry[ID_MAXSIZE];
+		newIDTable.literal_count = 0;
 		return newIDTable;
 	}
 
@@ -36,18 +38,29 @@ namespace IT {
 	}
 	bool CheckLiteralPresense(IDTable idtable, Entry ID) {
 		DATATYPES id_type = ID.IDDataType;
-		for (int i = 0; i < idtable.size; i++) {
-			Entry current = idtable.table[i];
-			if (current.IDType == L && current.IDDataType == ID.IDDataType) {
-				if (id_type == INT) {
-					if (current.value.vint == ID.value.vint) {
-						return true;
+		
+		for (int i = 0; i < idtable.literal_count; i++) {
+			Entry current = idtable.lits[i];
+			if (id_type == INT&&current.IDDataType==INT) {
+				if (idtable.lits[i].value.vint == ID.value.vint) {
+					return true;
+				}
+			}
+			else if(id_type==STR&&current.IDDataType==STR) {
+				int iterator = 0;
+				bool equal = true;
+				while (ID.value.vstr.str[iterator] != '\0') {
+					iterator++;
+					if (ID.value.vstr.str[iterator] != current.value.vstr.str[iterator]) {
+						equal = false;
+						break;
 					}
 				}
+				if (equal) {
+					return true;
+				}
 				else {
-					if (current.value.vstr.str == ID.value.vstr.str) {
-						return true;
-					}
+					continue;
 				}
 			}
 		}
@@ -58,6 +71,9 @@ namespace IT {
 		idtable.table = nullptr;
 		delete[] idtable.table;
 		idtable.size = 0;
+		idtable.lits = nullptr;
+		delete[]idtable.lits;
+		idtable.literal_count = 0;
 	}
 
 };

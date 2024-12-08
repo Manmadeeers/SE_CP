@@ -542,7 +542,7 @@ namespace FST
 			}
 
 			else if (lexem == LEX_LITERAL) {
-
+				//forms literal name for ID table
 				char* tmp_literal_name = new char[STR_MAXSIZE];
 				int g = 0;
 				while (Literal[g] != '\0') {
@@ -574,19 +574,30 @@ namespace FST
 				}
 
 				tmp_literal_name[g] = '\0';
+				//end of literal name forming
 
+				//if a string literal found(by quotation marks)
 				if (in.words[i][0] == '\'') {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::STR;
 					NewId.IDType = IT::L;
-					NewId.value.vstr.str = (char*)in.words[i];
+					int iterator = 1;
+					char* tmp_lit_value = new char[MAX_WORD_LENGTH];
+					while (in.words[i][iterator] != '\'') {
+						tmp_lit_value[iterator - 1] = in.words[i][iterator];
+						iterator++;
+					}
+					tmp_lit_value[iterator-1] = '\0';
+					NewId.value.vstr.str = tmp_lit_value;
 					short length = 1;
 					while (in.words[i][length] != '\'') {
 						length++;
 					}
+					length--;
 					NewId.value.vstr.len = length;
 				}
+				//if number literal found(every literal except string once)
 				else {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
@@ -594,8 +605,11 @@ namespace FST
 					NewId.IDType = IT::L;
 					NewId.value.vint = stoi((char*)in.words[i]);
 				}
-				if (IT::CheckLiteralPresense(idtable, NewId) == false) {
+				//checking if there were no such literals
+				//and if not -  adding it to id table
+				if (!(IT::CheckLiteralPresense(idtable, NewId))) {
 					IT::AddToIDTable(idtable, NewId);
+					idtable.lits[idtable.literal_count++] = NewId;
 					count_literals++;
 				}
 
