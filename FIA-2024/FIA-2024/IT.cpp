@@ -41,13 +41,13 @@ namespace IT {
 		
 		for (int i = 0; i < idtable.literal_count; i++) {
 			Entry current = idtable.lits[i];
-			if (id_type == INT&&current.IDDataType==INT) {
-				if (idtable.lits[i].value.vint == ID.value.vint) {
+			if (id_type == UNT&&current.IDDataType==UNT) {
+				if (idtable.lits[i].value.unt_val== ID.value.unt_val) {
 					return true;
 				}
 			}
-			else if(id_type==STR&&current.IDDataType==STR) {
-				int iterator = 0;
+			else if(id_type==SYM&&current.IDDataType==SYM) {
+				/*int iterator = 0;
 				bool equal = true;
 				while (ID.value.vstr.str[iterator] != '\0') {
 					iterator++;
@@ -61,6 +61,9 @@ namespace IT {
 				}
 				else {
 					continue;
+				}*/
+				if (current.value.sym_val == ID.value.sym_val) {
+					return true;
 				}
 			}
 		}

@@ -1,16 +1,11 @@
-﻿Сборка начата 08.12.2024 19:52:38.
+﻿Сборка начата 09.12.2024 19:12:13.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\FIA-2024.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
-         Создание "Debug\FIA-2024.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\FIA-2024.tlog\unsuccessfulbuild".
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Error.cpp "FIA-2024.cpp" FST.cpp IT.cpp In.cpp LT.cpp Log.cpp MFST.cpp Out.cpp Parm.cpp
-         Error.cpp
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         (компиляция исходного файла "Error.cpp")
-         
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt "FIA-2024.cpp" FST.cpp Parm.cpp
          FIA-2024.cpp
      1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
          (компиляция исходного файла "FIA-2024.cpp")
@@ -20,32 +15,6 @@
          (компиляция исходного файла "FST.cpp")
          
      1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\FST.cpp(69,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
-         IT.cpp
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         (компиляция исходного файла "IT.cpp")
-         
-         In.cpp
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         (компиляция исходного файла "In.cpp")
-         
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.cpp(34,9): warning C4101: next: неиспользованная локальная переменная
-         LT.cpp
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         (компиляция исходного файла "LT.cpp")
-         
-         Log.cpp
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         (компиляция исходного файла "Log.cpp")
-         
-         MFST.cpp
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         (компиляция исходного файла "MFST.cpp")
-         
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\MFST.cpp(239,72): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
-         Out.cpp
-     1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         (компиляция исходного файла "Out.cpp")
-         
          Parm.cpp
      1>C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
          (компиляция исходного файла "Parm.cpp")
@@ -63,6 +32,7 @@
          Debug\MFST.obj
          Debug\Out.obj
          Debug\Parm.obj
+         LINK : не найден или не выполнена сборка C:\Users\Manmade\Desktop\SE_CP\FIA-2024\Debug\FIA-2024.exe при последней инкрементной компоновке; выполняется полная компоновка
          FIA-2024.vcxproj -> C:\Users\Manmade\Desktop\SE_CP\FIA-2024\Debug\FIA-2024.exe
        FinalizeBuildStatus:
          Файл "Debug\FIA-2024.tlog\unsuccessfulbuild" удаляется.
@@ -75,19 +45,10 @@
        (Целевой объект ClCompile) -> 
          C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
          C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
          C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\FST.cpp(69,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
          C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.cpp(34,9): warning C4101: next: неиспользованная локальная переменная
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\MFST.cpp(239,72): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-         C:\Users\Manmade\Desktop\SE_CP\FIA-2024\FIA-2024\In.h(31,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
 
-    Предупреждений: 13
+    Предупреждений: 4
     Ошибок: 0
 
-Прошло времени 00:00:07.18
+Прошло времени 00:00:03.08

@@ -1,0 +1,26 @@
+unt function func(unt a, unt b)
+{
+create unt number = 0xA;
+number>>2;
+number<<1;
+a+=b;
+number+=a;
+return number;
+}
+Main
+{
+create unt x;
+create unt y;
+x=1;
+y=x;
+create sym sa;
+sa = 'A'
+Write sa;
+WriteLine y;
+untill x<10{x++};
+Write x;
+get_date();
+get_time();
+
+return 0;
+}

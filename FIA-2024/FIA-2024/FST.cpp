@@ -446,20 +446,16 @@ namespace FST
 		return LEX_UNDEF;
 	}
 
-	bool check_int(unsigned char* word) {
-		FST integer_au(
+	bool check_unt(unsigned char* word) {
+		FST unt_au(
 			word,
-			8,
-			NODE(1, RELATION('i', 1)),
-			NODE(1, RELATION('n', 2)),
-			NODE(1, RELATION('t', 3)),
-			NODE(1, RELATION('e', 4)),
-			NODE(1, RELATION('g', 5)),
-			NODE(1, RELATION('e', 6)),
-			NODE(1, RELATION('r', 7)),
+			4,
+			NODE(1,RELATION('u',1)),
+			NODE(1,RELATION('n',2)),
+			NODE(1,RELATION('t',3)),
 			NODE()
 		);
-		if (execute(integer_au)) {
+		if (execute(unt_au)) {
 			return true;
 		}
 		return false;
@@ -496,11 +492,11 @@ namespace FST
 				while (true) {
 					if (FiniteAutomats(in.words[i + gap_front]) == LEX_FUNCTION) {
 						NewId.IDType = IT::F;
-						if (check_int(in.words[i])) {
-							NewId.IDDataType = IT::INT;
+						if (check_unt(in.words[i])) {
+							NewId.IDDataType = IT::UNT;
 						}
 						else {
-							NewId.IDDataType = IT::STR;
+							NewId.IDDataType = IT::SYM;
 						}
 						break;
 					}
@@ -512,11 +508,11 @@ namespace FST
 							}
 						}
 						NewId.id = (char*)in.words[i + gap_front];
-						if (check_int(in.words[i])) {
-							NewId.IDDataType = IT::INT;
+						if (check_unt(in.words[i])) {
+							NewId.IDDataType = IT::UNT;
 						}
 						else {
-							NewId.IDDataType = IT::STR;
+							NewId.IDDataType = IT::SYM;
 						}
 						IT::AddToIDTable(idtable, NewId);
 						done = true;
@@ -580,9 +576,9 @@ namespace FST
 				if (in.words[i][0] == '\'') {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
-					NewId.IDDataType = IT::STR;
+					NewId.IDDataType = IT::SYM;
 					NewId.IDType = IT::L;
-					int iterator = 1;
+					/*int iterator = 1;
 					char* tmp_lit_value = new char[MAX_WORD_LENGTH];
 					while (in.words[i][iterator] != '\'') {
 						tmp_lit_value[iterator - 1] = in.words[i][iterator];
@@ -595,15 +591,16 @@ namespace FST
 						length++;
 					}
 					length--;
-					NewId.value.vstr.len = length;
+					NewId.value.vstr.len = length;*/
+					NewId.value.sym_val = (char)in.words[i][1];
 				}
 				//if number literal found(every literal except string once)
 				else {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
-					NewId.IDDataType = IT::INT;
+					NewId.IDDataType = IT::UNT;
 					NewId.IDType = IT::L;
-					NewId.value.vint = stoi((char*)in.words[i]);
+					NewId.value.unt_val = stoi((char*)in.words[i]);
 				}
 				//checking if there were no such literals
 				//and if not -  adding it to id table

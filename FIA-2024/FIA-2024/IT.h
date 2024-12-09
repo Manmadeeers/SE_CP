@@ -8,7 +8,7 @@
 #define STR_MAXSIZE 255
 
 namespace IT {
-	enum DATATYPES { INT = 1, STR = 2 };
+	enum DATATYPES { UNT = 1, SYM = 2 };
 	enum IDTYPE { V = 1, F = 2, P = 3, L = 4 };
 	struct Entry {
 		int first_line_ID;//link to the lexem table
@@ -16,11 +16,8 @@ namespace IT {
 		DATATYPES IDDataType;
 		IDTYPE IDType;
 		union {
-			int vint;
-			struct {
-				short len;
-				char* str;
-			}vstr;
+			int unt_val;
+			char sym_val;
 		}value;
 	};
 
