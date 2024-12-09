@@ -126,7 +126,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			if (current.first_line_ID <= 9) {
 				if (current.IDType == IT::L) {
 					if (current.IDDataType == IT::UNT) {
-						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val << endl;
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val<<" ) " << endl;
 					}
 					else {
 						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val<< " )" << endl;
@@ -186,13 +186,13 @@ int _tmain(int argc, _TCHAR* argv[])
 		
 
 
-	/*	MFST_TRACE_START
+		MFST_TRACE_START
 			MFST::Mfst mfst(LexTable, GRB::getGreibach());
 		mfst.start();
 
 		mfst.savededucation();
 
-		mfst.printrules();*/
+		mfst.printrules();
 
 		LT::DeleteLexTable(LexTable);
 		IT::DeleteIdTable(IDTable);

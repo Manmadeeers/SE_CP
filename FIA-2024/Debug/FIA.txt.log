@@ -1,16 +1,16 @@
 Test:  without errors 
 
 Test:  without errors 
----------- Protocol ---------- Date: 09.12.2024 19:13:40
+---------- Protocol ---------- Date: 10.12.2024 00:36:17
 ----------Parametres----------
 -in: FIA.txt
 -out: FIA.txt.out
 -log: FIA.txt.log
 ----------Entered info----------
-unt function func(unt a, unt b)|{|create unt number = 0xA;|number>>2;|number<<1;|a+=b;|number+=a;|return number;|}|Main|{|create unt x;|create unt y;|x=1;|y=x;|create sym sa;|sa = 'A'|Write sa;|WriteLine y;|untill x<10{x++};|Write x;|get_date();|get_time();||return 0;|}||
-Total amount of symbols: 272
+unt function func(unt a, unt b,c)|{|create unt number = 0x0A;|number >> 0x02;|number << 0x01;|a = a + b;|number = number + a;|return number;|};|Main|{|create unt x;|create unt y;|x = 0x01;|y = x;|create sym sa;|sa = 'A';|sb = 'b';|sc = 'b';|Write sa;|WriteLine y;|Write x;|get_date();|get_time();|return 0x00;|};;
+Total amount of symbols: 313
 Total amount of ignored symbols: 0
-Total amount of lines: 28
+Total amount of lines: 26
 unt
 function
 func
@@ -21,6 +21,8 @@ a
 
 unt
 b
+,
+c
 )
 
 |
@@ -34,30 +36,42 @@ number
 
 =
 
-0xA
+0x0A
 ;
 
 |
-number>>2
+number
+>>
+0x02
 ;
 
 |
-number<<1
+number
+<<
+0x01
 ;
 
 |
 a
-+
 
 =
+
+a
+
++
+
 b
 ;
 
 |
 number
-+
 
 =
+
+number
+
++
+
 a
 ;
 
@@ -69,6 +83,8 @@ number
 |
 
 }
+
+;
 
 |
 Main
@@ -90,13 +106,17 @@ y
 
 |
 x
+
 =
-1
+
+0x01
 ;
 
 |
 y
+
 =
+
 x
 ;
 
@@ -113,6 +133,26 @@ sa
 
 'A'
 
+;
+
+|
+sb
+
+=
+
+'b'
+
+;
+
+|
+sc
+
+=
+
+'b'
+
+;
+
 |
 Write
 sa
@@ -121,19 +161,6 @@ sa
 |
 WriteLine
 y
-;
-
-|
-untill
-x<10
-{
-x
-+
-
-+
-
-}
-
 ;
 
 |
@@ -158,16 +185,14 @@ get_time
 ;
 
 |
-
-|
 return
-0
+0x00
 ;
 
 |
 
 }
 
-|
+;
 
-|
+;

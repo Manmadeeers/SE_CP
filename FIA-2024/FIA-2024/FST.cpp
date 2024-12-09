@@ -81,12 +81,18 @@ namespace FST
 
 	char FiniteAutomats(unsigned char* word) {
 
-		char special[] = { '(',')','{','}',';',',' };
+		if (word[0] == '>' && word[1] == '>') {
+			return LEX_RIGHT_MOVE;
+		}
+		if (word[0] == '<' && word[1] == '<') {
+			return LEX_LEFT_MOVE;
+		}
+		char special[] = { '(',')','{','}',';',',','<','>'};
 		char signs[] = { '+','-','/','*' };
 		if ((char*)word == (char*)STR_END) {
 			return STR_END;
 		}
-		const int spec_size = 11;
+		const int spec_size = 13;
 		const int sign_size = 4;
 
 		for (int j = 0; j < spec_size; j++) {
@@ -103,35 +109,44 @@ namespace FST
 		if (word[0] == '=') {
 			return LEX_EQUALS;
 		}
+	
 
-		FST integer_au(
+		FST loop_au(
 			word,
-			8,
-			NODE(1, RELATION('i', 1)),
-			NODE(1, RELATION('n', 2)),
-			NODE(1, RELATION('t', 3)),
-			NODE(1, RELATION('e', 4)),
-			NODE(1, RELATION('g', 5)),
-			NODE(1, RELATION('e', 6)),
-			NODE(1, RELATION('r', 7)),
+			6,
+			NODE(1, RELATION('u',1)),
+			NODE(1,RELATION('n',2)),
+			NODE(1,RELATION('t',3)),
+			NODE(1,RELATION('i',4)),
+			NODE(1,RELATION('l',5)),
 			NODE()
 		);
-		if (execute(integer_au)) {
+
+		if (execute(loop_au)) {
+			return LEX_LOOP;
+		}
+
+		FST unt_au(
+			word,
+			4,
+			NODE(1, RELATION('u', 1)),
+			NODE(1, RELATION('n', 2)),
+			NODE(1, RELATION('t', 3)),
+			NODE()
+		);
+		if (execute(unt_au)) {
 			return LEX_DATATYPE;
 		}
 
-		FST string_au(
+		FST sym_au(
 			word,
-			7,
+			4,
 			NODE(1, RELATION('s', 1)),
-			NODE(1, RELATION('t', 2)),
-			NODE(1, RELATION('r', 3)),
-			NODE(1, RELATION('i', 4)),
-			NODE(1, RELATION('n', 5)),
-			NODE(1, RELATION('g', 6)),
+			NODE(1, RELATION('y', 2)),
+			NODE(1, RELATION('m', 3)),
 			NODE()
 		);
-		if (execute(string_au)) {
+		if (execute(sym_au)) {
 			return LEX_DATATYPE;
 		}
 
@@ -153,21 +168,20 @@ namespace FST
 			return LEX_FUNCTION;
 		}
 
-		FST declare_au(
+		FST create_au(
 			word,
-			8,
-			NODE(1, RELATION('d', 1)),
-			NODE(1, RELATION('e', 2)),
-			NODE(1, RELATION('c', 3)),
-			NODE(1, RELATION('l', 4)),
-			NODE(1, RELATION('a', 5)),
-			NODE(1, RELATION('r', 6)),
-			NODE(1, RELATION('e', 7)),
+			7,
+			NODE(1, RELATION('c', 1)),
+			NODE(1, RELATION('r', 2)),
+			NODE(1, RELATION('e', 3)),
+			NODE(1, RELATION('a', 4)),
+			NODE(1, RELATION('t', 5)),
+			NODE(1, RELATION('e', 6)),
 			NODE()
 		);
 
-		if (execute(declare_au)) {
-			return LEX_DECLARE;
+		if (execute(create_au)) {
+			return LEX_CREATE;
 		}
 
 		FST return_au(
@@ -186,25 +200,43 @@ namespace FST
 			return LEX_RETURN;
 		}
 
-		FST print_au(
+		FST write_au(
 			word,
 			6,
-			NODE(1, RELATION('p', 1)),
+			NODE(1, RELATION('W', 1)),
 			NODE(1, RELATION('r', 2)),
 			NODE(1, RELATION('i', 3)),
-			NODE(1, RELATION('n', 4)),
-			NODE(1, RELATION('t', 5)),
+			NODE(1, RELATION('t', 4)),
+			NODE(1, RELATION('e', 5)),
 			NODE()
 		);
 
-		if (execute(print_au)) {
-			return LEX_PRINT;
+		if (execute(write_au)) {
+			return LEX_WRITE;
 		}
 
+		FST writeline_au(
+			word,
+			10,
+			NODE(1, RELATION('W', 1)),
+			NODE(1, RELATION('r', 2)),
+			NODE(1, RELATION('i', 3)),
+			NODE(1, RELATION('t', 4)),
+			NODE(1, RELATION('e', 5)),
+			NODE(1, RELATION('L', 6)),
+			NODE(1, RELATION('i', 7)),
+			NODE(1, RELATION('n', 8)),
+			NODE(1, RELATION('e', 9)),
+			NODE()
+		);
+
+		if (execute(writeline_au)) {
+			return LEX_WRITELINE;
+		}
 		FST main_au(
 			word,
 			5,
-			NODE(1, RELATION('m', 1)),
+			NODE(1, RELATION('M', 1)),
 			NODE(1, RELATION('a', 2)),
 			NODE(1, RELATION('i', 3)),
 			NODE(1, RELATION('n', 4)),
@@ -215,96 +247,41 @@ namespace FST
 			return LEX_MAIN;
 		}
 
-		FST integer_literal_au(
+		FST unt_literal_au(
 			word,
-			2,
-			NODE(20, RELATION('0', 0), RELATION('0', 1), RELATION('1', 0), RELATION('1', 1), RELATION('2', 0),
-				RELATION('2', 1), RELATION('3', 0), RELATION('3', 1), RELATION('4', 0), RELATION('4', 1),
-				RELATION('5', 0), RELATION('5', 1), RELATION('6', 0), RELATION('6', 1), RELATION('7', 0),
-				RELATION('7', 1), RELATION('8', 0), RELATION('8', 1), RELATION('9', 0), RELATION('9', 1)),
+			5,
+			NODE(1, RELATION('0', 1)),
+			NODE(1, RELATION('x', 2)),
+			NODE(16,
+				RELATION('0', 3), RELATION('1', 3),
+				RELATION('2', 3), RELATION('3', 3),
+				RELATION('4', 3), RELATION('5', 3),
+				RELATION('6', 3), RELATION('7', 3),
+				RELATION('8', 3), RELATION('9', 3),
+
+				RELATION('A', 3), RELATION('B', 3),
+				RELATION('C', 3), RELATION('D', 3),
+				RELATION('E', 3), RELATION('F', 3)
+			),
+			NODE(16,
+				RELATION('0', 4), RELATION('1', 4),
+				RELATION('2', 4), RELATION('3', 4),
+				RELATION('4', 4), RELATION('5', 4),
+				RELATION('6', 4), RELATION('7', 4),
+				RELATION('8', 4), RELATION('9', 4),
+
+				RELATION('A', 4), RELATION('B', 4),
+				RELATION('C', 4), RELATION('D', 4),
+				RELATION('E', 4), RELATION('F', 4)
+				),
 			NODE()
 		);
-		if (execute(integer_literal_au)) {
+		if (execute(unt_literal_au)) {
 			return LEX_LITERAL;
 		}
 
 
-		FST string_literal_au(
-			word,
-			4,
-			NODE(1, RELATION('\'', 1)),
-			NODE(258,
-				RELATION('A', 1), RELATION('A', 2), RELATION('B', 1), RELATION('B', 2),
-				RELATION('C', 1), RELATION('C', 2), RELATION('D', 1), RELATION('D', 2),
-				RELATION('E', 1), RELATION('E', 2), RELATION('F', 1), RELATION('F', 2),
-				RELATION('G', 1), RELATION('G', 2), RELATION('H', 1), RELATION('H', 2),
-				RELATION('I', 1), RELATION('I', 2), RELATION('J', 1), RELATION('J', 2),
-				RELATION('K', 1), RELATION('K', 2), RELATION('L', 1), RELATION('L', 2),
-				RELATION('M', 1), RELATION('M', 2), RELATION('N', 1), RELATION('N', 2),
-				RELATION('O', 1), RELATION('O', 2), RELATION('P', 1), RELATION('P', 2),
-				RELATION('Q', 1), RELATION('Q', 2), RELATION('R', 1), RELATION('R', 2),
-				RELATION('S', 1), RELATION('S', 2), RELATION('T', 1), RELATION('T', 2),
-				RELATION('U', 1), RELATION('U', 2), RELATION('V', 1), RELATION('V', 2),
-				RELATION('W', 1), RELATION('W', 2), RELATION('X', 1), RELATION('X', 2),
-				RELATION('Y', 1), RELATION('Y', 2), RELATION('Z', 1), RELATION('Z', 2),
-				RELATION('a', 1), RELATION('a', 2), RELATION('b', 1), RELATION('b', 2),
-				RELATION('c', 1), RELATION('c', 2), RELATION('d', 1), RELATION('d', 2),
-				RELATION('e', 1), RELATION('e', 2), RELATION('f', 1), RELATION('f', 2),
-				RELATION('g', 1), RELATION('g', 2), RELATION('h', 1), RELATION('h', 2),
-				RELATION('i', 1), RELATION('i', 2), RELATION('j', 1), RELATION('j', 2),
-				RELATION('k', 1), RELATION('k', 2), RELATION('l', 1), RELATION('l', 2),
-				RELATION('m', 1), RELATION('m', 2), RELATION('n', 1), RELATION('n', 2),
-				RELATION('o', 1), RELATION('o', 2), RELATION('p', 1), RELATION('p', 2),
-				RELATION('q', 1), RELATION('q', 2), RELATION('r', 1), RELATION('r', 2),
-				RELATION('s', 1), RELATION('s', 2), RELATION('t', 1), RELATION('t', 2),
-				RELATION('u', 1), RELATION('u', 2), RELATION('v', 1), RELATION('v', 2),
-				RELATION('w', 1), RELATION('w', 2), RELATION('x', 1), RELATION('x', 2),
-				RELATION('y', 1), RELATION('y', 2), RELATION('z', 1), RELATION('z', 2),
-				RELATION('À', 1), RELATION('À', 2), RELATION('Á', 1), RELATION('Á', 2),
-				RELATION('Â', 1), RELATION('Â', 2), RELATION('Ã', 1), RELATION('Ã', 2),
-				RELATION('Ä', 1), RELATION('Ä', 2), RELATION('Å', 1), RELATION('Å', 2),
-				RELATION('¨', 1), RELATION('¨', 2), RELATION('Æ', 1), RELATION('Æ', 2),
-				RELATION('Ç', 1), RELATION('Ç', 2), RELATION('È', 1), RELATION('È', 2),
-				RELATION('É', 1), RELATION('É', 2), RELATION('Ê', 1), RELATION('Ê', 2),
-				RELATION('Ë', 1), RELATION('Ë', 2), RELATION('Ì', 1), RELATION('Ì', 2),
-				RELATION('Í', 1), RELATION('Í', 2), RELATION('Î', 1), RELATION('Î', 2),
-				RELATION('Ï', 1), RELATION('Ï', 2), RELATION('Ð', 1), RELATION('Ð', 2),
-				RELATION('Ñ', 1), RELATION('Ñ', 2), RELATION('Ò', 1), RELATION('Ò', 2),
-				RELATION('Ó', 1), RELATION('Ó', 2), RELATION('Ô', 1), RELATION('Ô', 2),
-				RELATION('Õ', 1), RELATION('Õ', 2), RELATION('Ö', 1), RELATION('Ö', 2),
-				RELATION('×', 1), RELATION('×', 2), RELATION('Ø', 1), RELATION('Ø', 2),
-				RELATION('Ù', 1), RELATION('Ù', 2), RELATION('Ú', 1), RELATION('Ú', 2),
-				RELATION('Û', 1), RELATION('Û', 2), RELATION('Ü', 1), RELATION('Ü', 2),
-				RELATION('Ý', 1), RELATION('Ý', 2), RELATION('Þ', 1), RELATION('Þ', 2),
-				RELATION('ß', 1), RELATION('ß', 2), RELATION('à', 1), RELATION('à', 2),
-				RELATION('á', 1), RELATION('á', 2), RELATION('â', 1), RELATION('â', 2),
-				RELATION('ã', 1), RELATION('ã', 2), RELATION('ä', 1), RELATION('ä', 2),
-				RELATION('å', 1), RELATION('å', 2), RELATION('¸', 1), RELATION('¸', 2),
-				RELATION('æ', 1), RELATION('æ', 2), RELATION('ç', 1), RELATION('ç', 2),
-				RELATION('è', 1), RELATION('è', 2), RELATION('é', 1), RELATION('é', 2),
-				RELATION('ê', 1), RELATION('ê', 2), RELATION('ë', 1), RELATION('ë', 2),
-				RELATION('ì', 1), RELATION('ì', 2), RELATION('í', 1), RELATION('í', 2),
-				RELATION('î', 1), RELATION('î', 2), RELATION('ï', 1), RELATION('ï', 2),
-				RELATION('ð', 1), RELATION('ð', 2), RELATION('ñ', 1), RELATION('ñ', 2),
-				RELATION('ò', 1), RELATION('ò', 2), RELATION('ó', 1), RELATION('ó', 2),
-				RELATION('ô', 1), RELATION('ô', 2), RELATION('õ', 1), RELATION('õ', 2),
-				RELATION('ö', 1), RELATION('ö', 2), RELATION('÷', 1), RELATION('÷', 2),
-				RELATION('ø', 1), RELATION('ø', 2), RELATION('ù', 1), RELATION('ù', 2),
-				RELATION('ú', 1), RELATION('ú', 2), RELATION('û', 1), RELATION('û', 2),
-				RELATION('ü', 1), RELATION('ü', 2), RELATION('ý', 1), RELATION('ý', 2),
-				RELATION('þ', 1), RELATION('þ', 2), RELATION('ÿ', 1), RELATION('ÿ', 2),
-				RELATION('0', 1), RELATION('0', 2), RELATION('1', 1), RELATION('1', 2),
-				RELATION('2', 1), RELATION('2', 2), RELATION('3', 1), RELATION('3', 2),
-				RELATION('4', 1), RELATION('4', 2), RELATION('5', 1), RELATION('5', 2),
-				RELATION('6', 1), RELATION('6', 2), RELATION('7', 1), RELATION('7', 2),
-				RELATION('8', 1), RELATION('8', 2), RELATION('9', 1), RELATION('9', 2),
-				RELATION(' ', 1), RELATION(' ', 2)),
-			NODE(1, RELATION('\'', 3)),
-			NODE()
-		);
-		if (execute(string_literal_au)) {
-			return LEX_LITERAL;
-		}
+		
 
 		FST identifier_au(
 			word,
@@ -439,6 +416,46 @@ namespace FST
 			NODE()
 		);
 
+		FST sym_literal_au(
+			word,
+			4,
+			NODE(1, RELATION('\'', 1)),
+			NODE(52,
+				RELATION('A', 2), RELATION('B', 2),
+				RELATION('C', 2), RELATION('D', 2),
+				RELATION('E', 2), RELATION('F', 2),
+				RELATION('G', 2), RELATION('H', 2),
+				RELATION('I', 2), RELATION('J', 2),
+				RELATION('K', 2), RELATION('L', 2),
+				RELATION('M', 2), RELATION('N', 2),
+				RELATION('O', 2), RELATION('P', 2),
+				RELATION('Q', 2), RELATION('R', 2),
+				RELATION('S', 2), RELATION('T', 2),
+				RELATION('U', 2), RELATION('V', 2),
+				RELATION('W', 2), RELATION('X', 2),
+				RELATION('Y', 2), RELATION('Z', 2),
+				RELATION('a', 2), RELATION('b', 2),
+				RELATION('c', 2), RELATION('d', 2),
+				RELATION('e', 2), RELATION('f', 2),
+				RELATION('g', 2), RELATION('h', 2),
+				RELATION('i', 2), RELATION('j', 2),
+				RELATION('k', 2), RELATION('l', 2),
+				RELATION('m', 2), RELATION('n', 2),
+				RELATION('o', 2), RELATION('p', 2),
+				RELATION('q', 2), RELATION('r', 2),
+				RELATION('s', 2), RELATION('t', 2),
+				RELATION('u', 2), RELATION('v', 2),
+				RELATION('w', 2), RELATION('x', 2),
+				RELATION('y', 2), RELATION('z', 2)
+			),
+			NODE(1, RELATION('\'', 3)),
+			NODE()
+		);
+
+		if (execute(sym_literal_au)) {
+			return LEX_LITERAL;
+		}
+
 		if (execute(identifier_au)) {
 			return LEX_ID;
 		}
@@ -465,7 +482,7 @@ namespace FST
 		const char* Literal = "Literal";
 		int count_lines = 0;
 		int count_literals = 0;
-		for (int i = 0; i < in.words_size; i++) {
+		for (int i = 0; i < in.words_size-1; i++) {
 			LT::Entry NewLex;
 			IT::Entry NewId;
 			unsigned char* current_word = in.words[i];
@@ -572,35 +589,21 @@ namespace FST
 				tmp_literal_name[g] = '\0';
 				//end of literal name forming
 
-				//if a string literal found(by quotation marks)
+				//if a symbol literal found(by quotation marks)
 				if (in.words[i][0] == '\'') {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::SYM;
 					NewId.IDType = IT::L;
-					/*int iterator = 1;
-					char* tmp_lit_value = new char[MAX_WORD_LENGTH];
-					while (in.words[i][iterator] != '\'') {
-						tmp_lit_value[iterator - 1] = in.words[i][iterator];
-						iterator++;
-					}
-					tmp_lit_value[iterator-1] = '\0';
-					NewId.value.vstr.str = tmp_lit_value;
-					short length = 1;
-					while (in.words[i][length] != '\'') {
-						length++;
-					}
-					length--;
-					NewId.value.vstr.len = length;*/
 					NewId.value.sym_val = (char)in.words[i][1];
 				}
-				//if number literal found(every literal except string once)
+				//if number literal found(every literal except symbol once)
 				else {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::UNT;
 					NewId.IDType = IT::L;
-					NewId.value.unt_val = stoi((char*)in.words[i]);
+					NewId.value.unt_val = (char*)in.words[i];
 				}
 				//checking if there were no such literals
 				//and if not -  adding it to id table

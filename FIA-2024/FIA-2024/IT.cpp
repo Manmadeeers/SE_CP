@@ -42,26 +42,23 @@ namespace IT {
 		for (int i = 0; i < idtable.literal_count; i++) {
 			Entry current = idtable.lits[i];
 			if (id_type == UNT&&current.IDDataType==UNT) {
-				if (idtable.lits[i].value.unt_val== ID.value.unt_val) {
-					return true;
-				}
-			}
-			else if(id_type==SYM&&current.IDDataType==SYM) {
-				/*int iterator = 0;
+				int iterator = 0;
 				bool equal = true;
-				while (ID.value.vstr.str[iterator] != '\0') {
-					iterator++;
-					if (ID.value.vstr.str[iterator] != current.value.vstr.str[iterator]) {
+				while (ID.value.unt_val[iterator] != '\0') {
+					if (ID.value.unt_val[iterator] != current.value.unt_val[iterator]) {
 						equal = false;
 						break;
 					}
+					iterator++;
 				}
 				if (equal) {
 					return true;
 				}
 				else {
 					continue;
-				}*/
+				}
+			}
+			else if(id_type==SYM&&current.IDDataType==SYM) {
 				if (current.value.sym_val == ID.value.sym_val) {
 					return true;
 				}

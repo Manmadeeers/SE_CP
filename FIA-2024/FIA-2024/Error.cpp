@@ -34,7 +34,7 @@ namespace ERROR
 		ERROR_ENTRY(67, "ID Table:failed to get an element by index.Table subscript out of range or less then possible"),
 		ERROR_ENTRY(68,"ID Table:failed to create an ID Table. Size is more then allowed"),
 		ERROR_ENTRY_NODEF(69),
-		ERROR_ENTRY_NODEF10(70), 
+		ERROR_ENTRY_NODEF10(70),
 		ERROR_ENTRY_NODEF10(80),
 
 		//lecsical analyzer erors
@@ -46,7 +46,7 @@ namespace ERROR
 		ERROR_ENTRY(95, "Lexical analyser: function was determined more than once"),
 		ERROR_ENTRY(96, "Lexical analyser: variable was declared more than once"),
 		ERROR_ENTRY(97, "Lexical analyser: unknown variable"),
-		ERROR_ENTRY_NODEF(98), 
+		ERROR_ENTRY_NODEF(98),
 		ERROR_ENTRY_NODEF(99),
 
 		//
@@ -65,11 +65,11 @@ namespace ERROR
 		ERROR_ENTRY(112, "Failed to create log file (-log)"),
 		ERROR_ENTRY(113, "Failed to create out file (-out)"),
 		ERROR_ENTRY(114,"Log file creation impossible"),
-		ERROR_ENTRY_NODEF(115), 
+		ERROR_ENTRY_NODEF(115),
 		ERROR_ENTRY_NODEF(116),
 		ERROR_ENTRY_NODEF(117),
 		ERROR_ENTRY_NODEF(118),
-		ERROR_ENTRY_NODEF(119), 
+		ERROR_ENTRY_NODEF(119),
 		ERROR_ENTRY_NODEF10(120),
 		ERROR_ENTRY_NODEF10(130),
 		ERROR_ENTRY_NODEF10(140),
@@ -92,6 +92,8 @@ namespace ERROR
 		ERROR_ENTRY(601,"Incorrect identifier"),
 		ERROR_ENTRY(602,"Error occeured in parametres of the function"),
 		ERROR_ENTRY(603,"Error occured in parametres of a function that's beeing currently called"),
+		ERROR_ENTRY(604,"Error occured in parametres of called function"),
+		ERROR_ENTRY(605,"Error occured in parametres of lib function"),
 		ERROR_ENTRY_NODEF10(610),
 		ERROR_ENTRY_NODEF10(620),
 		ERROR_ENTRY_NODEF10(630),

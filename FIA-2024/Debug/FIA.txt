@@ -1,26 +1,26 @@
 unt function func(unt a, unt b)
 {
-create unt number = 0xA;
-number>>2;
-number<<1;
-a+=b;
-number+=a;
+create unt number = 0x0A;
+number >> 0x02;
+number << 0x01;
+a = a + b;
+number = number + a;
 return number;
-}
+};
 Main
 {
 create unt x;
 create unt y;
-x=1;
-y=x;
+x = 0x01;
+y = x;
 create sym sa;
-sa = 'A'
+sa = 'A';
+sb = 'b';
+sc = 'b';
 Write sa;
 WriteLine y;
-untill x<10{x++};
 Write x;
 get_date();
 get_time();
-
-return 0;
-}
+return 0x00;
+};

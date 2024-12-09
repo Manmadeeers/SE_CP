@@ -16,7 +16,7 @@ namespace IT {
 		DATATYPES IDDataType;
 		IDTYPE IDType;
 		union {
-			int unt_val;
+			char* unt_val;
 			char sym_val;
 		}value;
 	};
