@@ -150,6 +150,20 @@ namespace FST
 			return LEX_DATATYPE;
 		}
 
+		FST bol_au(
+			word,
+			5,
+			NODE(1, RELATION('b', 1)),
+			NODE(1, RELATION('o', 2)),
+			NODE(1, RELATION('o', 3)),
+			NODE(1, RELATION('l', 4)),
+			NODE()
+		);
+
+		if (execute(bol_au)) {
+			return LEX_DATATYPE;
+		}
+
 		FST function_au(
 			word,
 			9,
@@ -246,7 +260,6 @@ namespace FST
 		if (execute(main_au)) {
 			return LEX_MAIN;
 		}
-
 		FST unt_literal_au(
 			word,
 			5,
@@ -280,6 +293,74 @@ namespace FST
 			return LEX_LITERAL;
 		}
 
+		FST sym_literal_au(
+			word,
+			4,
+			NODE(1, RELATION('\'', 1)),
+			NODE(52,
+				RELATION('A', 2), RELATION('B', 2),
+				RELATION('C', 2), RELATION('D', 2),
+				RELATION('E', 2), RELATION('F', 2),
+				RELATION('G', 2), RELATION('H', 2),
+				RELATION('I', 2), RELATION('J', 2),
+				RELATION('K', 2), RELATION('L', 2),
+				RELATION('M', 2), RELATION('N', 2),
+				RELATION('O', 2), RELATION('P', 2),
+				RELATION('Q', 2), RELATION('R', 2),
+				RELATION('S', 2), RELATION('T', 2),
+				RELATION('U', 2), RELATION('V', 2),
+				RELATION('W', 2), RELATION('X', 2),
+				RELATION('Y', 2), RELATION('Z', 2),
+				RELATION('a', 2), RELATION('b', 2),
+				RELATION('c', 2), RELATION('d', 2),
+				RELATION('e', 2), RELATION('f', 2),
+				RELATION('g', 2), RELATION('h', 2),
+				RELATION('i', 2), RELATION('j', 2),
+				RELATION('k', 2), RELATION('l', 2),
+				RELATION('m', 2), RELATION('n', 2),
+				RELATION('o', 2), RELATION('p', 2),
+				RELATION('q', 2), RELATION('r', 2),
+				RELATION('s', 2), RELATION('t', 2),
+				RELATION('u', 2), RELATION('v', 2),
+				RELATION('w', 2), RELATION('x', 2),
+				RELATION('y', 2), RELATION('z', 2)
+			),
+			NODE(1, RELATION('\'', 3)),
+			NODE()
+		);
+
+		if (execute(sym_literal_au)) {
+			return LEX_LITERAL;
+		}
+
+		FST logic_literal_au1(
+			word,
+			5,
+			NODE(1, RELATION('T', 1)),
+			NODE(1, RELATION('r', 2)),
+			NODE(1, RELATION('u', 3)),
+			NODE(1, RELATION('e', 4)),
+			NODE()
+		);
+
+		if (execute(logic_literal_au1)) {
+			return LEX_LITERAL;
+		}
+
+		FST logic_literal_au0(
+			word,
+			6,
+			NODE(1, RELATION('F', 1)),
+			NODE(1, RELATION('a', 2)),
+			NODE(1, RELATION('l', 3)),
+			NODE(1, RELATION('s', 4)),
+			NODE(1, RELATION('e', 5)),
+			NODE()
+		);
+
+		if (execute(logic_literal_au0)) {
+			return LEX_LITERAL;
+		}
 
 		
 
@@ -416,45 +497,6 @@ namespace FST
 			NODE()
 		);
 
-		FST sym_literal_au(
-			word,
-			4,
-			NODE(1, RELATION('\'', 1)),
-			NODE(52,
-				RELATION('A', 2), RELATION('B', 2),
-				RELATION('C', 2), RELATION('D', 2),
-				RELATION('E', 2), RELATION('F', 2),
-				RELATION('G', 2), RELATION('H', 2),
-				RELATION('I', 2), RELATION('J', 2),
-				RELATION('K', 2), RELATION('L', 2),
-				RELATION('M', 2), RELATION('N', 2),
-				RELATION('O', 2), RELATION('P', 2),
-				RELATION('Q', 2), RELATION('R', 2),
-				RELATION('S', 2), RELATION('T', 2),
-				RELATION('U', 2), RELATION('V', 2),
-				RELATION('W', 2), RELATION('X', 2),
-				RELATION('Y', 2), RELATION('Z', 2),
-				RELATION('a', 2), RELATION('b', 2),
-				RELATION('c', 2), RELATION('d', 2),
-				RELATION('e', 2), RELATION('f', 2),
-				RELATION('g', 2), RELATION('h', 2),
-				RELATION('i', 2), RELATION('j', 2),
-				RELATION('k', 2), RELATION('l', 2),
-				RELATION('m', 2), RELATION('n', 2),
-				RELATION('o', 2), RELATION('p', 2),
-				RELATION('q', 2), RELATION('r', 2),
-				RELATION('s', 2), RELATION('t', 2),
-				RELATION('u', 2), RELATION('v', 2),
-				RELATION('w', 2), RELATION('x', 2),
-				RELATION('y', 2), RELATION('z', 2)
-			),
-			NODE(1, RELATION('\'', 3)),
-			NODE()
-		);
-
-		if (execute(sym_literal_au)) {
-			return LEX_LITERAL;
-		}
 
 		if (execute(identifier_au)) {
 			return LEX_ID;
@@ -475,6 +517,56 @@ namespace FST
 		if (execute(unt_au)) {
 			return true;
 		}
+		return false;
+	}
+
+	bool check_logic(unsigned char* word) {
+		FST logic_au(
+			word,
+			5,
+			NODE(1, RELATION('b', 1)),
+			NODE(1, RELATION('o', 2)),
+			NODE(1, RELATION('o', 3)),
+			NODE(1, RELATION('l', 4)),
+			NODE()
+		);
+
+		if (execute(logic_au)) {
+			return true;
+		}
+		return false;
+	}
+
+	bool check_logic_literals(unsigned char* word) {
+		FST logic_lit_0_au(
+			word,
+			6,
+			NODE(1, RELATION('F', 1)),
+			NODE(1, RELATION('a', 2)),
+			NODE(1, RELATION('l', 3)),
+			NODE(1, RELATION('s', 4)),
+			NODE(1, RELATION('e', 5)),
+			NODE()
+		);
+
+		if (execute(logic_lit_0_au)) {
+			return true;
+		}
+
+		FST logic_lit_1_au(
+			word,
+			5,
+			NODE(1, RELATION('T', 1)),
+			NODE(1, RELATION('r', 2)),
+			NODE(1, RELATION('u', 3)),
+			NODE(1, RELATION('e', 4)),
+			NODE()
+		);
+
+		if (execute(logic_lit_1_au)) {
+			return true;
+		}
+
 		return false;
 	}
 
@@ -502,20 +594,27 @@ namespace FST
 			NewLex.src_str_num = count_lines;
 			LT::AddToLexTable(lextable, NewLex);
 
-
+			if (lexem == LEX_MAIN) {
+				scope.push((char*)"Main");
+			}
 			int gap_front = 1;
 			if (lexem == LEX_DATATYPE) {
 				NewId.first_line_ID = count_lines;
 				bool done = false;
 				while (true) {
 					if (FiniteAutomats(in.words[i + gap_front]) == LEX_FUNCTION) {
+						scope.push((char*)in.words[i + gap_front]);
 						NewId.IDType = IT::F;
 						if (check_unt(in.words[i])) {
 							NewId.IDDataType = IT::UNT;
 						}
+						else if (check_logic(in.words[i])) {
+							NewId.IDDataType = IT::BOO;
+						}
 						else {
 							NewId.IDDataType = IT::SYM;
 						}
+						NewId.scope = (char*)"NULL";
 						break;
 					}
 					else if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
@@ -529,9 +628,13 @@ namespace FST
 						if (check_unt(in.words[i])) {
 							NewId.IDDataType = IT::UNT;
 						}
+						else if (check_logic(in.words[i])) {
+							NewId.IDDataType = IT::BOO;
+						}
 						else {
 							NewId.IDDataType = IT::SYM;
 						}
+						//NewId.scope = scope.top();
 						NewId.scope = scope.top();
 						IT::AddToIDTable(idtable, NewId);
 						done = true;
@@ -547,7 +650,6 @@ namespace FST
 
 						if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
 							NewId.id = (char*)in.words[i + gap_front];
-							NewId.scope = (char*)"null";
 							IT::AddToIDTable(idtable, NewId);
 							scope.push(NewId.id);
 							done = true;
@@ -602,8 +704,18 @@ namespace FST
 					NewId.IDDataType = IT::SYM;
 					NewId.IDType = IT::L;
 					NewId.value.sym_val = (char)in.words[i][1];
-					NewId.scope = scope.top();
+					//NewId.scope = scope.top();
 				}
+				else if (check_logic_literals(in.words[i])) {
+					NewId.scope = (char*)"null";
+					NewId.first_line_ID = count_lines;
+					NewId.id = tmp_literal_name;
+					NewId.IDDataType = IT::BOO;
+					NewId.IDType = IT::L;
+					NewId.value.bool_val = (char*)in.words[i];
+					//NewId.scope = scope.top();
+				}
+
 				//if number literal found(every literal except symbol once)
 				else {
 					NewId.scope = (char*)"null";
@@ -612,11 +724,12 @@ namespace FST
 					NewId.IDDataType = IT::UNT;
 					NewId.IDType = IT::L;
 					NewId.value.unt_val = (char*)in.words[i];
-					NewId.scope = scope.top();
+					//NewId.scope = scope.top();
 				}
 				//checking if there were no such literals
 				//and if not -  adding it to id table
 				if (!(IT::CheckLiteralPresense(idtable, NewId))) {
+					NewId.scope = scope.top();
 					IT::AddToIDTable(idtable, NewId);
 					idtable.lits[idtable.literal_count++] = NewId;
 					count_literals++;

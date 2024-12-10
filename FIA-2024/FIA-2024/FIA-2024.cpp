@@ -116,8 +116,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << endl << endl;
 
 		cout << "<-----Identifier table----->" << endl;
-		cout << "Identifier data types: " << "1 - UNT   2 - SYM " << endl;
-		cout << "Identifier types: " << "1-Variable   2-Function   3-Parametres   4-Literal(str or int)" << endl << endl;
+		cout << "Identifier data types: " << "1 - UNT   2 - SYM  3 - BOOL " << endl;
+		cout << "Identifier types: " << "1-Variable   2-Function   3-Parametres   4-Literal(sym, unt or bool)" << endl << endl;
 
 
 		cout << " ¹" << '\t' << "Identifier" << '\t' << '\t' << "Data type" << '\t' << '\t' << "Identifier type"<<"\t\t"<<"Scope" << endl;
@@ -126,30 +126,36 @@ int _tmain(int argc, _TCHAR* argv[])
 			if (current.first_line_ID <= 9) {
 				if (current.IDType == IT::L) {
 					if (current.IDDataType == IT::UNT) {
-						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val<<" ) " << endl;
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val << " ) " << "\t\t" << current.scope << endl;
+					}
+					else if (current.IDDataType == IT::BOO) {
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.bool_val << " ) " << "\t\t" << current.scope << endl;
 					}
 					else {
-						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val<< " )" << endl;
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val<< " )" << "\t\t\t" << current.scope << endl;
 					}
 
 				}
 				else {
-					cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << endl;
+					cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << "\t\t\t" << current.scope << endl;
 				}
 
 			}
 			else {
 				if (current.IDType == IT::L) {
 					if (current.IDDataType == IT::UNT) {
-						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val << " )" << endl;
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val << " )" << "\t\t" << current.scope << endl;
+					}
+					else if (current.IDDataType == IT::BOO) {
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.bool_val << " )" << "\t\t" << current.scope << endl;
 					}
 					else {
-						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val << " )" << endl;
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val << " )" << "\t\t\t" << current.scope << endl;
 					}
 
 				}
 				else {
-					cout << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << endl;
+					cout << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << "\t\t\t" << current.scope << endl;
 				}
 			}
 

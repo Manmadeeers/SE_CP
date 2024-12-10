@@ -74,6 +74,7 @@ namespace IT {
 		idtable.lits = nullptr;
 		delete[]idtable.lits;
 		idtable.literal_count = 0;
+		delete[]idtable.table->scope;
 	}
 
 };

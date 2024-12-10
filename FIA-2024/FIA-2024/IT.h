@@ -8,7 +8,7 @@
 #define STR_MAXSIZE 255
 
 namespace IT {
-	enum DATATYPES { UNT = 1, SYM = 2 };
+	enum DATATYPES { UNT = 1, SYM = 2 ,BOO = 3};
 	enum IDTYPE { V = 1, F = 2, P = 3, L = 4 };
 	struct Entry {
 		int first_line_ID;//link to the lexem table
@@ -17,6 +17,7 @@ namespace IT {
 		IDTYPE IDType;
 		union {
 			char* unt_val;
+			char* bool_val;
 			char sym_val;
 		}value;
 		char* scope;
