@@ -1,14 +1,14 @@
 Test:  without errors 
 
 Test:  without errors 
----------- Protocol ---------- Date: 10.12.2024 00:36:17
+---------- Protocol ---------- Date: 10.12.2024 12:26:30
 ----------Parametres----------
 -in: FIA.txt
 -out: FIA.txt.out
 -log: FIA.txt.log
 ----------Entered info----------
-unt function func(unt a, unt b,c)|{|create unt number = 0x0A;|number >> 0x02;|number << 0x01;|a = a + b;|number = number + a;|return number;|};|Main|{|create unt x;|create unt y;|x = 0x01;|y = x;|create sym sa;|sa = 'A';|sb = 'b';|sc = 'b';|Write sa;|WriteLine y;|Write x;|get_date();|get_time();|return 0x00;|};;
-Total amount of symbols: 313
+unt function func(unt a, unt b)|{|create unt number = 0x0A;|number >> 0x02;|number << 0x01;|a = a + b;|number = number + a;|return number;|};|Main|{|create unt x;|create unt y;|x = 0x01;|y = x;|create sym sa;|sa = 'A';|sb = 'b';|sc = 'b';|Write sa;|WriteLine y;|Write x;|get_date();|get_time();|return 0x00;|};;
+Total amount of symbols: 311
 Total amount of ignored symbols: 0
 Total amount of lines: 26
 unt
@@ -21,8 +21,6 @@ a
 
 unt
 b
-,
-c
 )
 
 |

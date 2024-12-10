@@ -197,6 +197,11 @@ int _tmain(int argc, _TCHAR* argv[])
 		LT::DeleteLexTable(LexTable);
 		IT::DeleteIdTable(IDTable);
 
+		for (int i = 0; i < in.words_size; i++) {
+			delete[]in.words[i];
+		}
+		delete[]in.words;
+		delete[]in.text;
 	}
 	catch (ERROR::Error exception) {
 		LOG::WriteERROR(log, exception);
