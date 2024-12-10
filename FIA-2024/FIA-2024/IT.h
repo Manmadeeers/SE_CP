@@ -19,6 +19,7 @@ namespace IT {
 			char* unt_val;
 			char sym_val;
 		}value;
+		char* scope;
 	};
 
 	struct IDTable {

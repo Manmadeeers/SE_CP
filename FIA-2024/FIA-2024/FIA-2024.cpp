@@ -116,11 +116,11 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << endl << endl;
 
 		cout << "<-----Identifier table----->" << endl;
-		cout << "Identifier data types: " << "1 - INT   2 - STR" << endl;
+		cout << "Identifier data types: " << "1 - UNT   2 - SYM " << endl;
 		cout << "Identifier types: " << "1-Variable   2-Function   3-Parametres   4-Literal(str or int)" << endl << endl;
 
 
-		cout << " ¹" << '\t' << "Identifier" << '\t' << '\t' << "Data type" << '\t' << '\t' << "Identifier type" << endl;
+		cout << " ¹" << '\t' << "Identifier" << '\t' << '\t' << "Data type" << '\t' << '\t' << "Identifier type"<<"\t\t"<<"Scope" << endl;
 		for (int i = 0; i < IDTable.size; i++) {
 			IT::Entry current = IDTable.table[i];
 			if (current.first_line_ID <= 9) {
@@ -156,6 +156,11 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 
 		cout << endl << endl;
+
+		/*for (int i = 0; i < IDTable.size; i++) {
+			IT::Entry current = IDTable.table[i];
+			cout << current.first_line_ID << " " << current.id << ' ' << current.IDDataType << " " << current.IDType << ' ' << current.scope << endl;
+		}*/
 
 #ifdef LIT_CHECK
 		cout << "Literals to check" << endl;

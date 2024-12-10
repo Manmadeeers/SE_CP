@@ -479,6 +479,7 @@ namespace FST
 	}
 
 	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in) {
+		stack<char*>scope;
 		const char* Literal = "Literal";
 		int count_lines = 0;
 		int count_literals = 0;
@@ -531,6 +532,7 @@ namespace FST
 						else {
 							NewId.IDDataType = IT::SYM;
 						}
+						NewId.scope = scope.top();
 						IT::AddToIDTable(idtable, NewId);
 						done = true;
 						break;
@@ -542,9 +544,12 @@ namespace FST
 				if (!done) {
 					gap_front++;
 					while (!done) {
+
 						if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
 							NewId.id = (char*)in.words[i + gap_front];
+							NewId.scope = (char*)"null";
 							IT::AddToIDTable(idtable, NewId);
+							scope.push(NewId.id);
 							done = true;
 						}
 						gap_front++;
@@ -591,19 +596,23 @@ namespace FST
 
 				//if a symbol literal found(by quotation marks)
 				if (in.words[i][0] == '\'') {
+					NewId.scope = (char*)"null";
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::SYM;
 					NewId.IDType = IT::L;
 					NewId.value.sym_val = (char)in.words[i][1];
+					NewId.scope = scope.top();
 				}
 				//if number literal found(every literal except symbol once)
 				else {
+					NewId.scope = (char*)"null";
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::UNT;
 					NewId.IDType = IT::L;
 					NewId.value.unt_val = (char*)in.words[i];
+					NewId.scope = scope.top();
 				}
 				//checking if there were no such literals
 				//and if not -  adding it to id table
