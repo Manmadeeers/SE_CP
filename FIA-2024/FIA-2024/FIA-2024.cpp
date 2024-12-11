@@ -113,6 +113,9 @@ int _tmain(int argc, _TCHAR* argv[])
 			store_prev = current.src_str_num;
 
 		}
+		/*	for (short i = 0; i < in.words_size; i++) {
+			cout << '[' << in.words[i] << ']' << endl;
+		}*/
 		cout << endl << endl;
 
 		cout << "<-----Identifier table----->" << endl;
@@ -168,51 +171,22 @@ int _tmain(int argc, _TCHAR* argv[])
 			cout << current.first_line_ID << " " << current.id << ' ' << current.IDDataType << " " << current.IDType << ' ' << current.scope << endl;
 		}*/
 
-#ifdef LIT_CHECK
-		cout << "Literals to check" << endl;
-		for (int i = 0; i < IDTable.literal_count; i++) {
-			IT::Entry current = IDTable.lits[i];
-			if (current.IDDataType == IT::INT) {
-				cout << current.value.vint << endl;
-			}
-			else {
-				cout << current.value.vstr.str << endl;
-			}
 
-	}
-		cout << "All literals" << endl;
-		for (int i = 0; i < IDTable.size; i++) {
-			if (IDTable.table[i].IDType == IT::L) {
-				if (IDTable.table[i].IDDataType == IT::INT) {
-					cout << IDTable.table[i].value.vint << endl;
-				}
-				else {
-					cout << IDTable.table[i].value.vstr.str << endl;
-				}
-			}
-		}
-
-#endif // LIT_CHECK
 
 		
 
 
 		MFST_TRACE_START
-			MFST::Mfst mfst(LexTable, GRB::getGreibach());
+		MFST::Mfst mfst(LexTable, GRB::getGreibach());
 		mfst.start();
-
 		mfst.savededucation();
-
 		mfst.printrules();
+		mfst.freeStoreState();
+
 
 		LT::DeleteLexTable(LexTable);
 		IT::DeleteIdTable(IDTable);
-
-		for (int i = 0; i < in.words_size; i++) {
-			delete[]in.words[i];
-		}
-		delete[]in.words;
-		delete[]in.text;
+		In::deleteIN(in);
 	}
 	catch (ERROR::Error exception) {
 		LOG::WriteERROR(log, exception);

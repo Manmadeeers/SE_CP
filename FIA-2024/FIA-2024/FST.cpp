@@ -103,9 +103,22 @@ namespace FST
 
 		for (int k = 0; k < sign_size; k++) {
 			if (word[0] == signs[k]) {
-				return LEX_MATH;
+				return signs[k];
 			}
 		}
+		FST equals_au(
+			word,
+			3,
+			NODE(1, RELATION('=', 1)),
+			NODE(1, RELATION('=', 2)),
+			NODE()
+		);
+
+		if (execute(equals_au)) {
+			return LEX_DEQUALS;
+		}
+
+
 		if (word[0] == '=') {
 			return LEX_EQUALS;
 		}
@@ -603,7 +616,7 @@ namespace FST
 				bool done = false;
 				while (true) {
 					if (FiniteAutomats(in.words[i + gap_front]) == LEX_FUNCTION) {
-						scope.push((char*)in.words[i + gap_front]);
+						//scope.push((char*)in.words[i + gap_front]);
 						NewId.IDType = IT::F;
 						if (check_unt(in.words[i])) {
 							NewId.IDDataType = IT::UNT;
@@ -698,33 +711,30 @@ namespace FST
 
 				//if a symbol literal found(by quotation marks)
 				if (in.words[i][0] == '\'') {
-					NewId.scope = (char*)"null";
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::SYM;
 					NewId.IDType = IT::L;
 					NewId.value.sym_val = (char)in.words[i][1];
-					//NewId.scope = scope.top();
+					
 				}
 				else if (check_logic_literals(in.words[i])) {
-					NewId.scope = (char*)"null";
+					
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::BOO;
 					NewId.IDType = IT::L;
 					NewId.value.bool_val = (char*)in.words[i];
-					//NewId.scope = scope.top();
 				}
 
 				//if number literal found(every literal except symbol once)
 				else {
-					NewId.scope = (char*)"null";
+					//NewId.scope = (char*)"null";
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::UNT;
 					NewId.IDType = IT::L;
 					NewId.value.unt_val = (char*)in.words[i];
-					//NewId.scope = scope.top();
 				}
 				//checking if there were no such literals
 				//and if not -  adding it to id table
@@ -736,6 +746,10 @@ namespace FST
 				}
 
 			}
+		}
+
+		for (short i = 0; i < scope.size(); i++) {
+			scope.pop();
 		}
 	}
 }

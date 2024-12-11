@@ -41,6 +41,9 @@ namespace In {
 				column++;
 				break;
 			case IN::L:
+				if (text[in_to_return.size] == ';' && text[in_to_return.size + 1] == ';') {
+					throw ERROR_THROW(98);
+				}
 				text[in_to_return.size] = current_symbol;
 				column++;
 				in_to_return.size++;
@@ -116,6 +119,20 @@ namespace In {
 				count_words++;
 				count_symbols = 0;
 				words[count_words][count_symbols++] = current_symbol;
+
+				if (in_to_return.text[i + 1] == '='&&current_symbol=='=') {
+					words[count_words][count_symbols++] = in_to_return.text[i + 1];
+					i += 2;
+				}
+
+				if (current_symbol == '+' && in_to_return.text[i + 1]) {
+					words[count_words][count_symbols++] = in_to_return.text[i + 1];
+					i += 2;
+				}
+				if (current_symbol == ';' && in_to_return.text[i + 1] == ';') {
+					//throw ERROR_THROW(98);
+					i += 2;
+				}
 				words[count_words][count_symbols] = '\0';
 				count_symbols = 0;
 				count_words++;
@@ -165,5 +182,19 @@ namespace In {
 		in_to_return.words_size = count_words;
 
 		return in_to_return;
+	}
+
+	void deleteIN(IN in) {
+		for (int i = 0; i < in.words_size; i++) {
+			delete[]in.words[i];
+		}
+		delete[]in.words;
+		delete[]in.text;
+		delete[]in.code;
+		in.size = 0;
+		in.ignore = 0;
+		in.lines = 0;
+		in.words_size = 0;
+
 	}
 }

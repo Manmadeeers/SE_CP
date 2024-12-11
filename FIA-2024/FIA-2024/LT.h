@@ -19,6 +19,7 @@
 #define LEX_UNDEF 'U'
 #define STR_END 'E'
 #define LEX_EQUALS '='
+#define LEX_DEQUALS 'e'
 
 namespace LT {
 	struct Entry

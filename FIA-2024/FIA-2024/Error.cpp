@@ -46,6 +46,7 @@ namespace ERROR
 		ERROR_ENTRY(95, "Lexical analyser: function was determined more than once"),
 		ERROR_ENTRY(96, "Lexical analyser: variable was declared more than once"),
 		ERROR_ENTRY(97, "Lexical analyser: unknown variable"),
+		ERROR_ENTRY(98,"Lexical analyser: punktuation mistakes"),
 		ERROR_ENTRY_NODEF(98),
 		ERROR_ENTRY_NODEF(99),
 
@@ -89,20 +90,13 @@ namespace ERROR
 
 		//syntax analyser errors
 		ERROR_ENTRY(600,"Incorrect program structure"),
-		ERROR_ENTRY(601,"Incorrect identifier"),
-		ERROR_ENTRY(602,"Error occeured in parametres of the function"),
-		ERROR_ENTRY(603,"Error occured in parametres of a function that's beeing currently called"),
-		ERROR_ENTRY(604,"Error occured in parametres of called function"),
-		ERROR_ENTRY(605,"Error occured in parametres of lib function"),
-		ERROR_ENTRY_NODEF10(610),
-		ERROR_ENTRY_NODEF10(620),
-		ERROR_ENTRY_NODEF10(630),
-		ERROR_ENTRY_NODEF10(640),
-		ERROR_ENTRY_NODEF10(650),
-		ERROR_ENTRY_NODEF10(660),
-		ERROR_ENTRY_NODEF10(670),
-		ERROR_ENTRY_NODEF10(680),
-		ERROR_ENTRY_NODEF10(690),
+		ERROR_ENTRY(601,"Incorrect identifier, ley word usage or punktuation"),
+		ERROR_ENTRY(602,"Incorrect expression"),
+		ERROR_ENTRY(603,"Incorrect expression as function parametres"),
+		ERROR_ENTRY(604,"Incorrect function parametres"),
+		ERROR_ENTRY(605,"Incorrect math function or operator or it's usage"),
+		ERROR_ENTRY(606,"Incorrect loop exit condition"),
+		ERROR_ENTRY(607,"Incorrect parametres in function that doesn't take any"),
 
 		ERROR_ENTRY_NODEF100(700),
 

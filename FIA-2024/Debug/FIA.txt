@@ -1,11 +1,17 @@
-unt function func(unt a, unt b)
+unt function func0()
+{
+Write 0xFF;
+return 0x00;
+};
+
+unt function func(unt acc, unt lec)
 {
 create unt num = 0x0A;
 num >> 0x02;
 num << 0x01;
-until(a < 0x0A){a = a + b;};
-a = a + b;
-number = num + a;
+until(a < 0x0A){acc = acc + lec;};
+acc = acc + lec;
+number = num + acc;
 return num;
 };
 

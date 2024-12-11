@@ -41,4 +41,5 @@ namespace In {
 		int code[256] = IN_CODE_TABLE;
 	};
 	IN getin(wchar_t infile[]);
+	void deleteIN(IN in);
 };

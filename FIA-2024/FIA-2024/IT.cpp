@@ -63,18 +63,28 @@ namespace IT {
 					return true;
 				}
 			}
+			else if (id_type == BOO && current.IDDataType == BOO) {
+				if (current.value.bool_val == ID.value.bool_val) {
+					return true;
+				}
+			}
 		}
 		return false;
 	}
 
 	void DeleteIdTable(IDTable& idtable) {
+		for (short i = 0; i < idtable.size; i++) {
+			delete[]idtable.table[i].scope;
+			delete[]idtable.table[i].value.bool_val;
+			delete[]idtable.table[i].value.unt_val;
+			delete[]idtable.table[i].id;
+		}
 		idtable.table = nullptr;
 		delete[] idtable.table;
 		idtable.size = 0;
 		idtable.lits = nullptr;
 		delete[]idtable.lits;
 		idtable.literal_count = 0;
-		delete[]idtable.table->scope;
 	}
 
 };

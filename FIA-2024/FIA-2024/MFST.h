@@ -57,7 +57,7 @@ namespace MFST
 		MfstState();
 		MfstState(short pposition, MFSTSTSTACK pst, short pnrulechain); // (позиция на ленте; стек автомата; индекс текущей цепочки текущего правила)
 		MfstState(short pposition, MFSTSTSTACK pst, short pnrule, short pnrulechain); // (позиция на ленте; стек автомата; индекс текущего правила; индекс текущей цепочки текущего правила)
-
+		void freeMfstState();
 	};
 	class my_stack_MfstState : public stack<MfstState> {
 	public:
@@ -106,6 +106,7 @@ namespace MFST
 		bool start();               // запустить автомат
 		bool savediagnosis(RC_STEP pprc_step); // тип возвращаемого значения этапа
 		void printrules();          // выводит промежуточную информацию по правилам
+		void freeStoreState();
 
 		struct Deducation
 		{
