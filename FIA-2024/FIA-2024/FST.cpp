@@ -81,6 +81,13 @@ namespace FST
 
 	char FiniteAutomats(unsigned char* word) {
 
+		if (word[0] == ' ' || word[0] == '\0' || word[0] == '|') {
+			return LEX_SKIP;
+		}
+		if (word[0] == '/' && word[1] == '/') {
+			ERROR_THROW(90);
+		}
+
 		if (word[0] == '>' && word[1] == '>') {
 			return LEX_RIGHT_MOVE;
 		}
@@ -176,6 +183,7 @@ namespace FST
 		if (execute(bol_au)) {
 			return LEX_DATATYPE;
 		}
+
 
 		FST function_au(
 			word,
@@ -375,6 +383,8 @@ namespace FST
 			return LEX_LITERAL;
 		}
 
+
+		
 		
 
 		FST identifier_au(
@@ -550,6 +560,22 @@ namespace FST
 		return false;
 	}
 
+	bool check_sym(unsigned char* word) {
+		FST sym_check(
+			word,
+			4,
+			NODE(1, RELATION('s', 1)),
+			NODE(1, RELATION('y', 2)),
+			NODE(1, RELATION('m', 3)),
+			NODE()
+		);
+
+		if (execute(sym_check)) {
+			return true;
+		}
+		return false;
+	}
+
 	bool check_logic_literals(unsigned char* word) {
 		FST logic_lit_0_au(
 			word,
@@ -600,9 +626,16 @@ namespace FST
 			}
 			char lexem = FiniteAutomats(current_word);
 
-			if (lexem == LEX_UNDEF) {
+			/*if (lexem == LEX_ID && scope.empty()) {
+				throw ERROR_THROW(600);
+			}*/
+
+			if (lexem == LEX_SKIP) {
 				continue;
 			}
+			/*if (lexem == LEX_UNDEF) {
+				throw ERROR_THROW(90);
+			}*/
 			NewLex.lexem = lexem;
 			NewLex.src_str_num = count_lines;
 			LT::AddToLexTable(lextable, NewLex);
@@ -624,6 +657,7 @@ namespace FST
 						else if (check_logic(in.words[i])) {
 							NewId.IDDataType = IT::BOO;
 						}
+						
 						else {
 							NewId.IDDataType = IT::SYM;
 						}
@@ -631,6 +665,10 @@ namespace FST
 						break;
 					}
 					else if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
+						if (scope.empty()) {
+							throw ERROR_THROW(600);
+							
+						}
 						NewId.IDType = IT::V;
 						for (int c = 1; c < 3; c++) {
 							if (FiniteAutomats(in.words[i + gap_front + c]) == ',' || FiniteAutomats(in.words[i + gap_front + c]) == ')') {
@@ -644,6 +682,7 @@ namespace FST
 						else if (check_logic(in.words[i])) {
 							NewId.IDDataType = IT::BOO;
 						}
+						
 						else {
 							NewId.IDDataType = IT::SYM;
 						}
@@ -675,6 +714,9 @@ namespace FST
 			}
 
 			else if (lexem == LEX_LITERAL) {
+				if (scope.empty()) {
+					throw ERROR_THROW(600);
+				}
 				//forms literal name for ID table
 				char* tmp_literal_name = new char[STR_MAXSIZE];
 				int g = 0;
@@ -710,7 +752,7 @@ namespace FST
 				//end of literal name forming
 
 				//if a symbol literal found(by quotation marks)
-				if (in.words[i][0] == '\'') {
+				if (check_sym(in.words[i])) {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::SYM;
@@ -726,9 +768,9 @@ namespace FST
 					NewId.IDType = IT::L;
 					NewId.value.bool_val = (char*)in.words[i];
 				}
-
-				//if number literal found(every literal except symbol once)
-				else {
+				
+				
+				else{
 					//NewId.scope = (char*)"null";
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
@@ -736,6 +778,9 @@ namespace FST
 					NewId.IDType = IT::L;
 					NewId.value.unt_val = (char*)in.words[i];
 				}
+
+				//if number literal found(every literal except symbol once)
+				
 				//checking if there were no such literals
 				//and if not -  adding it to id table
 				if (!(IT::CheckLiteralPresense(idtable, NewId))) {

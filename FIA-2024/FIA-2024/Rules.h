@@ -10,7 +10,7 @@ namespace GRB
 {
 	Greibach greiibach(NS('S'), TS('$'),				// начальный символ, или строка (дно стека)
 		8,											// количество правил
-		Rule(NS('S'), GRB_ERROR_SERIES + 0,			// Неверная нотация программы
+		Rule(NS('S'), GRB_ERROR_SERIES+0,			// Неверная нотация программы
 			6,		// S ->	m{NrE;}; | tfi(F){NrE;};S |	m{NrE;};S |	tfi(F){NrE;}; | i{NrE;}
 			Rule::Chain(8, TS('m'), TS('{'), NS('N'), TS('r'), NS('E'), TS(';'), TS('}'), TS(';')),
 			Rule::Chain(14, TS('t'), TS('f'), TS('i'), TS('('), NS('F'), TS(')'), TS('{'), NS('N'), TS('r'), NS('E'), TS(';'), TS('}'), TS(';'), NS('S')),
@@ -68,7 +68,7 @@ namespace GRB
 			Rule::Chain(2, TS('t'), TS('i')),
 			Rule::Chain(4, TS('t'), TS('i'), TS(','), NS('F'))
 		),
-		Rule(NS('M'), GRB_ERROR_SERIES + 5,			// Math functions and operators
+		Rule(NS('M'), GRB_ERROR_SERIES+5,			// Math functions and operators
 			10,		// M -> vE | vEM
 			Rule::Chain(2, TS('+'), NS('E')),
 			Rule::Chain(3, TS('+'), NS('E'), NS('M')),

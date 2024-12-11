@@ -5,8 +5,8 @@ namespace ERROR
 	// 100 - 109 - ошибки параметров//parameter erors
 	// 110 - 119 - ошибки открытия и чтения файлов/file open and read erors
 
-	Error errors[ERROR_MAX_ENTRY] = //list of errors
-	{//system errors
+    Error errors[ERROR_MAX_ENTRY] = //list of errors
+    {
 		ERROR_ENTRY(0, "Inapropriate error code"),
 		ERROR_ENTRY(1, "System error"),
 		ERROR_ENTRY(2,"Not enough parametres set"),
@@ -101,7 +101,8 @@ namespace ERROR
 		ERROR_ENTRY_NODEF100(700),
 
 		ERROR_ENTRY_NODEF100(800)
-	};
+		
+    };
 
 	Error geterror(int id) //function for common general errors
 	{

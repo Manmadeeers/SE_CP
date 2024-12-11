@@ -41,9 +41,9 @@ namespace In {
 				column++;
 				break;
 			case IN::L:
-				if (text[in_to_return.size] == ';' && text[in_to_return.size + 1] == ';') {
+				/*if (text[in_to_return.size] == ';' && text[in_to_return.size + 1] == ';') {
 					throw ERROR_THROW(98);
-				}
+				}*/
 				text[in_to_return.size] = current_symbol;
 				column++;
 				in_to_return.size++;
@@ -184,17 +184,14 @@ namespace In {
 		return in_to_return;
 	}
 
-	void deleteIN(IN in) {
+	void deleteIN(IN &in) {
 		for (int i = 0; i < in.words_size; i++) {
-			delete[]in.words[i];
+			delete in.words[i];
 		}
+		
 		delete[]in.words;
+	
 		delete[]in.text;
-		delete[]in.code;
-		in.size = 0;
-		in.ignore = 0;
-		in.lines = 0;
-		in.words_size = 0;
-
+		cout << '4' << endl;
 	}
 }

@@ -1,4 +1,4 @@
-unt function func0()
+unt function func0( )
 {
 Write 0xFF;
 return 0x00;

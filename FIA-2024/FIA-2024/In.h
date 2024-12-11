@@ -11,7 +11,7 @@
 #define IN_CODE_TABLE {\
 /*0*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T,  '|' , IN::T, IN::T,	IN::I, IN::T, IN::T,\
 /*1*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T,\
-/*2*/	IN::S,	IN::T, IN::F, IN::T, IN::F,	IN::T, IN::T, IN::Q, IN::L,	IN::L, IN::L, IN::L, IN::L,	IN::L, IN::T, IN::L,\
+/*2*/	IN::S,	IN::T, IN::Q, IN::T, IN::T,	IN::T, IN::T, IN::Q, IN::L,	IN::L, IN::L, IN::L, IN::L,	IN::L, IN::T, IN::L,\
 /*3*/	IN::T,	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::L, IN::T,	IN::L, IN::T, IN::T,\
 /*4*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::I, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T,\
 /*5*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::I,	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T,\
@@ -41,5 +41,5 @@ namespace In {
 		int code[256] = IN_CODE_TABLE;
 	};
 	IN getin(wchar_t infile[]);
-	void deleteIN(IN in);
+	void deleteIN(IN &in);
 };

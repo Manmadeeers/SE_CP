@@ -248,29 +248,29 @@ namespace MFST
         return true;
     }
 
-    void MfstState::freeMfstState() {
-        for (int i = 0; i < this->st.size(); i++) {
-            this->st.pop();
-        }
-    }
 
     void Mfst::freeStoreState() {
         for (int i = 0; i < this->storestate.size(); i++) {
             this->storestate.pop();
         }
+
         this->storestate.c.clear();
         for (int i = 0; i < this->st.size(); i++) {
             this->st.pop();
-           
         }
+
         this->st.c.clear();
+
         delete[]this->lex.table;
+
         delete[]this->lenta;
+
+        //this->grebach.size = 0;
         this->grebach.freeGramMemo();
-        this->grebach.rules->freeMemoFromRule();
-        
+
     }
 
-  
- 
+
+
 }
+

@@ -37,7 +37,7 @@ namespace GRB
 		//(нетерминал(< 0); идентификатор диагностического сообщ - я; кол - во цепочек - правых частей правила; множество цепочек - правых частей правила)
 		char* getCRule(char* b, short nchain); //получить парвило в виде N->цепочка (для распечатки) (буфер;номер цепочки(правой части) в правиле)
 		short getNextChain(GRBALPHABET t, Rule::Chain& pchain, short j); //получить следующую за j подходящую цепочку, вернуть её номер или -1 (первый символ цепочки;возвращаемая цепочка; номер цепочки)
-		void freeMemoFromRule();
+		/*void freeMemoFromRule();*/
 	};
 	struct Greibach			//грамматика Грейбах
 	{
@@ -53,6 +53,4 @@ namespace GRB
 		void freeGramMemo();
 	};
 	Greibach getGreibach(); //получить граматику
-
-	void freeMemo();
 }

@@ -63,6 +63,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	LOG::Log log = LOG::INITLOG;
 	PARM::PARM parm = PARM::getparm(argc, argv);
 	OUT::Out out;
+	In::IN in = In::getin(parm.in);
 	try {
 		out = OUT::getout(parm.out);
 		log = LOG::getlog(parm.log);
@@ -70,7 +71,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		LOG::WriteLine_W(log, (wchar_t*)L"Test: ", (wchar_t*)L" without errors \n", L"");
 		LOG::WriteLog(log);
 		LOG::WriteParm(log, parm);
-		In::IN in = In::getin(parm.in);
+		
 
 		cout << endl << "<-----Source text----->" << endl << endl;;
 		int src_line_counter = 0;
@@ -119,7 +120,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << endl << endl;
 
 		cout << "<-----Identifier table----->" << endl;
-		cout << "Identifier data types: " << "1 - UNT   2 - SYM  3 - BOOL " << endl;
+		cout << "Identifier data types: " << "1 - UNT   2 - SYM   3 - BOOL   4 - STR" << endl;
 		cout << "Identifier types: " << "1-Variable   2-Function   3-Parametres   4-Literal(sym, unt or bool)" << endl << endl;
 
 
@@ -134,6 +135,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					else if (current.IDDataType == IT::BOO) {
 						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.bool_val << " ) " << "\t\t" << current.scope << endl;
 					}
+					
 					else {
 						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val<< " )" << "\t\t\t" << current.scope << endl;
 					}
@@ -152,6 +154,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					else if (current.IDDataType == IT::BOO) {
 						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.bool_val << " )" << "\t\t" << current.scope << endl;
 					}
+					
 					else {
 						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val << " )" << "\t\t\t" << current.scope << endl;
 					}
@@ -170,11 +173,8 @@ int _tmain(int argc, _TCHAR* argv[])
 			IT::Entry current = IDTable.table[i];
 			cout << current.first_line_ID << " " << current.id << ' ' << current.IDDataType << " " << current.IDType << ' ' << current.scope << endl;
 		}*/
-
-
-
 		
-
+		
 
 		MFST_TRACE_START
 		MFST::Mfst mfst(LexTable, GRB::getGreibach());
@@ -183,19 +183,21 @@ int _tmain(int argc, _TCHAR* argv[])
 		mfst.printrules();
 		mfst.freeStoreState();
 
-
-		LT::DeleteLexTable(LexTable);
+		
 		IT::DeleteIdTable(IDTable);
-		In::deleteIN(in);
+		LT::DeleteLexTable(LexTable);
 	}
 	catch (ERROR::Error exception) {
+		//cout << exception.id << " : " << exception.message << endl;
 		LOG::WriteERROR(log, exception);
 		OUT::WriteERROR(exception, out);
 		LOG::Close(log);
 		OUT::Close(out);
+		
 	}
 
-
+	In::deleteIN(in);
 	system("pause");
+
 	return 0;
 }

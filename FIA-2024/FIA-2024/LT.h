@@ -20,6 +20,7 @@
 #define STR_END 'E'
 #define LEX_EQUALS '='
 #define LEX_DEQUALS 'e'
+#define LEX_SKIP 'S'
 
 namespace LT {
 	struct Entry
