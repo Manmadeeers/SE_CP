@@ -10,7 +10,6 @@ namespace IT {
 		newIDTable.size = 0;
 		newIDTable.table = new Entry[size];
 		newIDTable.maxsize = ID_MAXSIZE;
-		newIDTable.lits = new Entry[ID_MAXSIZE];
 		newIDTable.literal_count = 0;
 		return newIDTable;
 	}
@@ -39,9 +38,9 @@ namespace IT {
 	bool CheckLiteralPresense(IDTable idtable, Entry ID) {
 		DATATYPES id_type = ID.IDDataType;
 		
-		for (int i = 0; i < idtable.literal_count; i++) {
-			Entry current = idtable.lits[i];
-			if (id_type == UNT&&current.IDDataType==UNT) {
+		for (int i = 0; i < idtable.size; i++) {
+			Entry current = idtable.table[i];
+			if (id_type == UNT&&current.IDDataType==UNT&&current.IDType==IT::L) {
 				int iterator = 0;
 				bool equal = true;
 				while (ID.value.unt_val[iterator] != '\0') {
@@ -58,12 +57,12 @@ namespace IT {
 					continue;
 				}
 			}
-			else if(id_type==SYM&&current.IDDataType==SYM) {
+			else if(id_type==SYM&&current.IDDataType==SYM&&current.IDType == IT::L) {
 				if (current.value.sym_val == ID.value.sym_val) {
 					return true;
 				}
 			}
-			else if (id_type == BOO && current.IDDataType == BOO) {
+			else if (id_type == BOO && current.IDDataType == BOO&& current.IDType == IT::L) {
 				if (current.value.bool_val == ID.value.bool_val) {
 					return true;
 				}
@@ -73,8 +72,9 @@ namespace IT {
 	}
 
 	void DeleteIdTable(IDTable& idtable) {
+		//delete[]idtable.lits;
+		delete[]idtable.table;
 
-		delete[] idtable.table;
 	}
 
 };

@@ -54,6 +54,7 @@ namespace MFST
         nrulechain = -1;
     }
 
+
     Mfst::RC_STEP Mfst::step()
     {
         RC_STEP rc = SURPRISE;
@@ -90,6 +91,8 @@ namespace MFST
         {
             rc = LENTA_END;
             MFST_TRACE4(LENTA_END);
+
+            //system("pause");
         };
         return rc;
     };
@@ -230,6 +233,13 @@ namespace MFST
             rule = grebach.getRule(state.nrule);
             MFST_TRACE7
         };
+
+
+        state.st.c.clear();
+        delete[]lenta;
+        delete[]grebach.rules;
+
+
     };
 
     bool Mfst::savededucation()
@@ -248,29 +258,7 @@ namespace MFST
         return true;
     }
 
-
-    void Mfst::freeStoreState() {
-        for (int i = 0; i < this->storestate.size(); i++) {
-            this->storestate.pop();
-        }
-
-        this->storestate.c.clear();
-        for (int i = 0; i < this->st.size(); i++) {
-            this->st.pop();
-        }
-
-        this->st.c.clear();
-
-        delete[]this->lex.table;
-
-        delete[]this->lenta;
-
-        //this->grebach.size = 0;
-        this->grebach.freeGramMemo();
-
-    }
-
-
+  
 
 }
 

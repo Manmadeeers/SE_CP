@@ -185,13 +185,11 @@ namespace In {
 	}
 
 	void deleteIN(IN &in) {
-		for (int i = 0; i < in.words_size; i++) {
+		delete[]in.text;
+		for (int i = 0; i <LT_MAXSIZE; i++) {
 			delete in.words[i];
 		}
-		
 		delete[]in.words;
-	
-		delete[]in.text;
-		cout << '4' << endl;
+
 	}
 }

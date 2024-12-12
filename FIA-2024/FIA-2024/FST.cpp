@@ -94,7 +94,7 @@ namespace FST
 		if (word[0] == '<' && word[1] == '<') {
 			return LEX_LEFT_MOVE;
 		}
-		char special[] = { '(',')','{','}',';',',','<','>'};
+		char special[] = { '(',')','{','}',';',',','<','>' };
 		char signs[] = { '+','-','/','*' };
 		if ((char*)word == (char*)STR_END) {
 			return STR_END;
@@ -129,16 +129,16 @@ namespace FST
 		if (word[0] == '=') {
 			return LEX_EQUALS;
 		}
-	
+
 
 		FST loop_au(
 			word,
 			6,
-			NODE(1, RELATION('u',1)),
-			NODE(1,RELATION('n',2)),
-			NODE(1,RELATION('t',3)),
-			NODE(1,RELATION('i',4)),
-			NODE(1,RELATION('l',5)),
+			NODE(1, RELATION('u', 1)),
+			NODE(1, RELATION('n', 2)),
+			NODE(1, RELATION('t', 3)),
+			NODE(1, RELATION('i', 4)),
+			NODE(1, RELATION('l', 5)),
 			NODE()
 		);
 
@@ -307,7 +307,7 @@ namespace FST
 				RELATION('A', 4), RELATION('B', 4),
 				RELATION('C', 4), RELATION('D', 4),
 				RELATION('E', 4), RELATION('F', 4)
-				),
+			),
 			NODE()
 		);
 		if (execute(unt_literal_au)) {
@@ -384,8 +384,8 @@ namespace FST
 		}
 
 
-		
-		
+
+
 
 		FST identifier_au(
 			word,
@@ -532,9 +532,9 @@ namespace FST
 		FST unt_au(
 			word,
 			4,
-			NODE(1,RELATION('u',1)),
-			NODE(1,RELATION('n',2)),
-			NODE(1,RELATION('t',3)),
+			NODE(1, RELATION('u', 1)),
+			NODE(1, RELATION('n', 2)),
+			NODE(1, RELATION('t', 3)),
 			NODE()
 		);
 		if (execute(unt_au)) {
@@ -614,7 +614,7 @@ namespace FST
 		const char* Literal = "Literal";
 		int count_lines = 0;
 		int count_literals = 0;
-		for (int i = 0; i < in.words_size-1; i++) {
+		for (int i = 0; i < in.words_size - 1; i++) {
 			LT::Entry NewLex;
 			IT::Entry NewId;
 			unsigned char* current_word = in.words[i];
@@ -657,7 +657,7 @@ namespace FST
 						else if (check_logic(in.words[i])) {
 							NewId.IDDataType = IT::BOO;
 						}
-						
+
 						else {
 							NewId.IDDataType = IT::SYM;
 						}
@@ -667,7 +667,7 @@ namespace FST
 					else if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
 						if (scope.empty()) {
 							throw ERROR_THROW(600);
-							
+
 						}
 						NewId.IDType = IT::V;
 						for (int c = 1; c < 3; c++) {
@@ -682,7 +682,7 @@ namespace FST
 						else if (check_logic(in.words[i])) {
 							NewId.IDDataType = IT::BOO;
 						}
-						
+
 						else {
 							NewId.IDDataType = IT::SYM;
 						}
@@ -758,19 +758,19 @@ namespace FST
 					NewId.IDDataType = IT::SYM;
 					NewId.IDType = IT::L;
 					NewId.value.sym_val = (char)in.words[i][1];
-					
+
 				}
 				else if (check_logic_literals(in.words[i])) {
-					
+
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::BOO;
 					NewId.IDType = IT::L;
 					NewId.value.bool_val = (char*)in.words[i];
 				}
-				
-				
-				else{
+
+
+				else {
 					//NewId.scope = (char*)"null";
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
@@ -780,13 +780,13 @@ namespace FST
 				}
 
 				//if number literal found(every literal except symbol once)
-				
+
 				//checking if there were no such literals
 				//and if not -  adding it to id table
 				if (!(IT::CheckLiteralPresense(idtable, NewId))) {
 					NewId.scope = scope.top();
 					IT::AddToIDTable(idtable, NewId);
-					idtable.lits[idtable.literal_count++] = NewId;
+					
 					count_literals++;
 				}
 

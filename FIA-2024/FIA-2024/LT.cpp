@@ -30,9 +30,8 @@ namespace LT {
 	}
 
 	void DeleteLexTable(LexTable& LexTable) {
-		LexTable.table = nullptr;
-		delete[] LexTable.table;
-		LexTable.size = 0;
+		
+		delete[]LexTable.table;
 	}
 
 

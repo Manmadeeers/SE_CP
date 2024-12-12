@@ -3,7 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand>
     <LocalDebuggerWorkingDirectory>..\Debug</LocalDebuggerWorkingDirectory>
-    <LocalDebuggerCommandArguments>-in:In.txt</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-in:FIA.txt</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

@@ -56,8 +56,8 @@ namespace MFST
 		MFSTSTSTACK st;            // стек автомата
 		MfstState();
 		MfstState(short pposition, MFSTSTSTACK pst, short pnrulechain); // (позиция на ленте; стек автомата; индекс текущей цепочки текущего правила)
+		void freeMFSTSTATEMemo();
 		MfstState(short pposition, MFSTSTSTACK pst, short pnrule, short pnrulechain); // (позиция на ленте; стек автомата; индекс текущего правила; индекс текущей цепочки текущего правила)
-		void freeMfstState();
 	};
 	class my_stack_MfstState : public stack<MfstState> {
 	public:
@@ -123,5 +123,6 @@ namespace MFST
 
 		bool savededucation();
 	};
+	void SolveAllProblems();
 }
 

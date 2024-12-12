@@ -63,7 +63,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	LOG::Log log = LOG::INITLOG;
 	PARM::PARM parm = PARM::getparm(argc, argv);
 	OUT::Out out;
-	In::IN in = In::getin(parm.in);
+	
 	try {
 		out = OUT::getout(parm.out);
 		log = LOG::getlog(parm.log);
@@ -71,7 +71,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		LOG::WriteLine_W(log, (wchar_t*)L"Test: ", (wchar_t*)L" without errors \n", L"");
 		LOG::WriteLog(log);
 		LOG::WriteParm(log, parm);
-		
+		In::IN in = In::getin(parm.in);
+	
 
 		cout << endl << "<-----Source text----->" << endl << endl;;
 		int src_line_counter = 0;
@@ -93,6 +94,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		LT::LexTable LexTable = LT::Create(in.words_size);
 		IT::IDTable IDTable = IT::Create(in.words_size);
+	
 
 		FST::GetLexem(LexTable, IDTable, in);
 		//cout<<endl << ';' << in.words[0] << ';' << endl;
@@ -169,6 +171,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		cout << endl << endl;
 
+
 		/*for (int i = 0; i < IDTable.size; i++) {
 			IT::Entry current = IDTable.table[i];
 			cout << current.first_line_ID << " " << current.id << ' ' << current.IDDataType << " " << current.IDType << ' ' << current.scope << endl;
@@ -181,12 +184,14 @@ int _tmain(int argc, _TCHAR* argv[])
 		mfst.start();
 		mfst.savededucation();
 		mfst.printrules();
-		mfst.freeStoreState();
-
 		
+		
+
+
 		IT::DeleteIdTable(IDTable);
 		LT::DeleteLexTable(LexTable);
 	}
+
 	catch (ERROR::Error exception) {
 		//cout << exception.id << " : " << exception.message << endl;
 		LOG::WriteERROR(log, exception);
@@ -196,7 +201,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		
 	}
 
-	In::deleteIN(in);
+	
 	system("pause");
 
 	return 0;

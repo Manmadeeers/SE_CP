@@ -24,7 +24,6 @@ namespace IT {
 	};
 
 	struct IDTable {
-		Entry* lits;
 		int literal_count;
 		int maxsize;
 		int size;

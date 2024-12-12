@@ -84,11 +84,11 @@ namespace GRB
 	{
 		return greiibach;
 	}
-	//void Rule::freeMemoFromRule() {
-	//	delete[]this->chains->nt;
-	//}
 
 	void Greibach::freeGramMemo() {
+		delete[]this->rules->chains->nt;
+		delete[]this->rules->chains;
 		delete[]this->rules;
+
 	}
 }
