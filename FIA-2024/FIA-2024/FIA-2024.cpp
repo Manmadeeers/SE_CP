@@ -122,7 +122,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << endl << endl;
 
 		cout << "<-----Identifier table----->" << endl;
-		cout << "Identifier data types: " << "1 - UNT   2 - SYM   3 - BOOL   4 - STR" << endl;
+		cout << "Identifier data types: " << "1 - UNT   2 - SYM   3 - BOOL" << endl;
 		cout << "Identifier types: " << "1-Variable   2-Function   3-Parametres   4-Literal(sym, unt or bool)" << endl << endl;
 
 
@@ -184,12 +184,13 @@ int _tmain(int argc, _TCHAR* argv[])
 		mfst.start();
 		mfst.savededucation();
 		mfst.printrules();
-		
-		
 
+		PL::proceedPolishPerforming(LexTable);
 
+		
 		IT::DeleteIdTable(IDTable);
 		LT::DeleteLexTable(LexTable);
+		In::deleteIN(in);
 	}
 
 	catch (ERROR::Error exception) {

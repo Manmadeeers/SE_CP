@@ -182,7 +182,7 @@ namespace In {
 		in_to_return.words_size = count_words;
 
 		return in_to_return;
-	}
+	}	
 
 	void deleteIN(IN &in) {
 		delete[]in.text;

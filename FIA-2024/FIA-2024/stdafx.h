@@ -12,7 +12,10 @@
 #include <fstream>
 #include <ctime>
 #include <stack>
-
+#include <cctype>
+#include <map>
+#include <set>
+#include <string>
 
 
 #include "In.h"
@@ -23,6 +26,7 @@
 #include "LT.h"
 #include "FST.h"
 #include "IT.h"
+#include "Polish.h"
 //#include "GRB.h"
 //#include "MFST.h"
 using namespace std;

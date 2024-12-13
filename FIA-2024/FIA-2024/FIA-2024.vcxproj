@@ -138,6 +138,7 @@
     <ClCompile Include="MFST.cpp" />
     <ClCompile Include="Out.cpp" />
     <ClCompile Include="Parm.cpp" />
+    <ClCompile Include="Polish.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
@@ -150,6 +151,7 @@
     <ClInclude Include="MFST.h" />
     <ClInclude Include="Out.h" />
     <ClInclude Include="Parm.h" />
+    <ClInclude Include="Polish.h" />
     <ClInclude Include="Rules.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>

@@ -18,7 +18,17 @@
 #define LEX_LOOP 'u'
 #define LEX_UNDEF 'U'
 #define STR_END 'E'
+
 #define LEX_EQUALS '='
+#define LEX_PLUS '+'
+#define LEX_MINUS '-'
+#define LEX_DEVIDE '/'
+#define LEX_MULTIPLY '*'
+#define LEX_LEFTSC '('
+#define LEX_RIGHTSC ')'
+#define LEX_LEFTSQ '['
+#define LEX_RIGHTSQ ']'
+
 #define LEX_DEQUALS 'e'
 #define LEX_SKIP 'S'
 

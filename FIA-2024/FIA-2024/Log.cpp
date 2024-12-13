@@ -68,8 +68,8 @@ namespace LOG {
 		*log.stream << "Total amount of ignored symbols: " << in.ignore << endl;
 		*log.stream << "Total amount of lines: " << in.lines << endl;
 		//testing an array of words
-		for (int i = 0; i < in.words_size; i++) {
-			*log.stream << in.words[i] << endl;
+		for (int i = 0; i < in.words_size; i++){
+			*log.stream << in.words[i];
 		}
 	}
 
