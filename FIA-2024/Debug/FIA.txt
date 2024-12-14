@@ -14,6 +14,7 @@ num << Movement;
 
 
 create unt a = 0x00;
+create sym C = a;
 until(a < 0xFA){acc=acc+curr;};
 acc = acc + curr;
 create unt number = num + acc;

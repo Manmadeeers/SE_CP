@@ -161,9 +161,9 @@ namespace MFST
         case LENTA_END:
         {
             MFST_TRACE4("------>LENTA_END")
-                cout << "------------------------------------------------------------------------------------------------\n";
-            sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: все строки %d, синтаксический анализ выполнен успешно", 0, lex.table[lex.size - 1].src_str_num);
-            cout << setw(4) << left << 0 << "все строки " << lex.table[lex.size - 1].src_str_num << ", синтаксический анализ выполнен успешно\n";
+                cout<<endl << "------------------------------------------------------------------------------------------------\n";
+            sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: total lines %d, MFST: Syntax analysis finished without fails", 0, lex.table[lex.size - 1].src_str_num);
+            cout << setw(4) << left<<endl << 0 << "total lines:  " << lex.table[lex.size - 1].src_str_num << endl  << endl << "MFST: Syntax analysis finished without fails\n";
             rc = true;
             break;
         }
@@ -218,7 +218,7 @@ namespace MFST
         {
             errid = grebach.getRule(diagnosis[n].nrule).iderror;
             ERROR::Error err = ERROR::geterror(errid);
-            sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d,%s", err.id, lex.table[lpos].src_str_num, err.message);
+            sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: line %d,%s", err.id, lex.table[lpos].src_str_num, err.message);
             rc = buf;
             cout << buf << endl;
             throw ERROR_THROW(err.id);
@@ -229,6 +229,10 @@ namespace MFST
 
     void Mfst::printrules(bool deb)
     {
+        if (deb == true) {
+            cout << endl << "<--------------------Rules-------------------->" << endl;
+        }
+       
         MfstState state;
         GRB::Rule rule;
         for (unsigned short i = 0; i < storestate.size(); i++)

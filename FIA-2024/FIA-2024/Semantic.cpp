@@ -80,6 +80,9 @@ namespace SA {
 						}
 					}
 				}
+				if (ltable.table[i + 1].lexem == LEX_EQUALS) {
+
+				}
 			}
 		}
 
@@ -89,5 +92,7 @@ namespace SA {
 
 		//ParseForKeyWords(itable);
 		CheckTypes(itable,ltable);
+		cout << endl << "<-------------------------------------------------->" << endl;
+		cout<<endl << "SA: Semantic ananysis finshed witout fails" << endl << endl;
 	}
 }

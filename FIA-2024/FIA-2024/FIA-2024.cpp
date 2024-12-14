@@ -121,14 +121,15 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 		/*ERROR::printArray();*/
+		PL::findN(LexTable, IDTable);
 		if (parm.hasDebug) {
-			PL::findN(LexTable, IDTable);
+			
 
 			cout << "<----------Lex table after polish notation modification---------->" << endl;
 			LT::PrintLexTable(LexTable);
 
-			SA::ProceedSemanticAnalysis(LexTable, IDTable);
 		}
+		SA::ProceedSemanticAnalysis(LexTable, IDTable);
 		
 
 		IT::DeleteIdTable(IDTable);

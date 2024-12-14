@@ -828,11 +828,15 @@ namespace FST
 
 		}
 
-		for (short i = 0; i < scope.size(); i++) {
-			scope.pop();
-		}
 		if (main_counter == 0) {
 			throw ERROR_THROW(94);
 		}
+
+		for (short i = 0; i < scope.size(); i++) {
+			scope.pop();
+		}
+
+		cout << endl << "<-------------------------------------------------->" << endl;
+		cout<<endl << "LA:Lexical analysis finished without fails" << endl;
 	}
 }
