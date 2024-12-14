@@ -644,11 +644,12 @@ namespace FST
 
 			if (lexem == LEX_MAIN) {
 				main_counter++;
+				if (main_counter > 1) {
+					throw ERROR_THROW(94);
+				}
 				scope.push((char*)"Main");
 			}
-			if (main_counter > 1) {
-				throw ERROR_THROW(94);
-			}
+
 			int gap_front = 1;
 			if (lexem == LEX_DATATYPE) {
 				NewId.first_line_ID = count_lines;

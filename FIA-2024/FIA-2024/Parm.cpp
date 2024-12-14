@@ -13,6 +13,7 @@ namespace PARM {
 		bool hasIn = false;
 		bool hasOut = false;
 		bool hasLog = false;
+		
 		for (int i = 0; i < argc; i++) {//loop to check all the parametres(argc is an amount of them)
 			if (wcslen(argv[i]) > PARM_MAX_SIZE) {
 				throw ERROR_THROW(104);
@@ -28,6 +29,9 @@ namespace PARM {
 			if (wcsstr(argv[i], PARM_LOG)) {
 				wcscpy_s(parm_to_return.log, argv[i] + wcslen(PARM_LOG));
 				hasLog = true;
+			}
+			if (wcsstr(argv[i], PARM_DEB)) {
+				parm_to_return.hasDebug = true;
 			}
 		}
 

@@ -100,29 +100,36 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		FST::GetLexem(LexTable, IDTable, in);
 		//cout<<endl << ';' << in.words[0] << ';' << endl;
-		LT::PrintLexTable(LexTable);
+		if (parm.hasDebug==true) {
+			LT::PrintLexTable(LexTable);
+			cout << endl << endl;
+
+			IT::PrintIdTable(IDTable);
+
+		}
+		
 		/*	for (short i = 0; i < in.words_size; i++) {
 			cout << '[' << in.words[i] << ']' << endl;
 		}*/
-		cout << endl << endl;
-
-		IT::PrintIdTable(IDTable);
-
+		
 
 		MFST_TRACE_START
 		MFST::Mfst mfst(LexTable, GRB::getGreibach());
-		mfst.start();
+		mfst.start(parm.hasDebug);
 		mfst.savededucation();
-		mfst.printrules();
+		mfst.printrules(parm.hasDebug);
 
 
 		/*ERROR::printArray();*/
-		PL::findN(LexTable, IDTable);
+		if (parm.hasDebug) {
+			PL::findN(LexTable, IDTable);
 
-		cout << "<----------Lex table after polish notation modification---------->" << endl;
-		LT::PrintLexTable(LexTable);
+			cout << "<----------Lex table after polish notation modification---------->" << endl;
+			LT::PrintLexTable(LexTable);
 
-		SA::ProceedSemanticAnalysis(LexTable, IDTable);
+			SA::ProceedSemanticAnalysis(LexTable, IDTable);
+		}
+		
 
 		IT::DeleteIdTable(IDTable);
 		LT::DeleteLexTable(LexTable);

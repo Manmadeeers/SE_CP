@@ -15,34 +15,34 @@ public:
 static int FST_TRACE_n = -1;
 static char rbuf[205], sbuf[205], lbuf[1024];
 
-#define MFST_TRACE_START cout << setw(4) << left << "Этап" << ":"\
+#define MFST_TRACE_START if(parm.hasDebug==true){cout << setw(4) << left << "Этап" << ":"\
                             << setw(20) << left << " Правило"\
                             << setw(30) << left <<" Входная лента"\
-                            << left <<" Стек\n";
+                            << left <<" Стек\n";}
 
-#define MFST_TRACE1         cout << setw(4) << left << ++FST_TRACE_n << ": "\
+#define MFST_TRACE1        if(deb==true){ cout << setw(4) << left << ++FST_TRACE_n << ": "\
                             << setw(20) << left << rule.getCRule(rbuf,nrulechain)\
                             << setw(30) << left << getCLenta(lbuf,lenta_position)\
                             << setw(20) << left << getCSt(sbuf)\
-                            << endl;
+                            << endl;}
 
-#define MFST_TRACE2         cout << setw(4) << left << FST_TRACE_n << ": "\
+#define MFST_TRACE2         if(deb==true){cout << setw(4) << left << FST_TRACE_n << ": "\
                             << setw(20) << left << " "\
                             << setw(30) << left << getCLenta(lbuf,lenta_position)\
                             << setw(20) << left << getCSt(sbuf)\
-                            << endl;
+                            << endl;}
 
-#define MFST_TRACE3         cout << setw(4) << left << ++FST_TRACE_n << ": "\
+#define MFST_TRACE3         if(deb==true){cout << setw(4) << left << ++FST_TRACE_n << ": "\
                             << setw(20) << left << " "\
                             << setw(30) << left << getCLenta(lbuf,lenta_position)\
                             << setw(20) << left << getCSt(sbuf)\
-                            << endl;
+                            << endl;}
 
-#define MFST_TRACE4(c)      cout << setw(4) << left << ++FST_TRACE_n << ": "<< setw(20) << left << c << endl;
-#define MFST_TRACE5(c)      cout << setw(4) << left << FST_TRACE_n << ": "<< setw(20) << left << c << endl;
-#define MFST_TRACE6(c,k)    cout << setw(4) << left << FST_TRACE_n << ": "<< setw(20) << left << c << k << endl;
-#define MFST_TRACE7         cout << setw(4) << left << state.lenta_position << ": "\
-                            << setw(20) << left << rule.getCRule(rbuf,state.nrulechain) << endl;
+#define MFST_TRACE4(c)      if(deb==true){cout << setw(4) << left << ++FST_TRACE_n << ": "<< setw(20) << left << c << endl;}
+#define MFST_TRACE5(c)       if(deb==true){cout << setw(4) << left << FST_TRACE_n << ": "<< setw(20) << left << c << endl;}
+#define MFST_TRACE6(c,k)     if(deb==true){cout << setw(4) << left << FST_TRACE_n << ": "<< setw(20) << left << c << k << endl;}
+#define MFST_TRACE7          if(deb==true){cout << setw(4) << left << state.lenta_position << ": "\
+                            << setw(20) << left << rule.getCRule(rbuf,state.nrulechain) << endl;}
 
 typedef my_stack_SHORT MFSTSTSTACK;
 
@@ -99,14 +99,13 @@ namespace MFST
 		char* getCSt(char* buf);    // получить содержимое стека
 		char* getCLenta(char* buf, short pos, short n = 25);  // лента: n символов с pos
 		char* getDiagnosis(short n, char* buf); // получить n-ую строку диагностики или 0
-		bool savestate();            // сохранить текущее состояние автомата
-		bool resetstate();          // восстановить текущее состояние автомата
+		bool savestate(bool deb);            // сохранить текущее состояние автомата
+		bool resetstate(bool deb);          // восстановить текущее состояние автомата
 		bool push_chain(GRB::Rule::Chain chain); // поместить цепочку правила в стек
-		RC_STEP step();              // выполнить шаг автомата
-		bool start();               // запустить автомат
+		RC_STEP step(bool deb);              // выполнить шаг автомата
+		bool start(bool deb);               // запустить автомат
 		bool savediagnosis(RC_STEP pprc_step); // тип возвращаемого значения этапа
-		void printrules();          // выводит промежуточную информацию по правилам
-		void freeStoreState();
+		void printrules(bool deb);          // выводит промежуточную информацию по правилам
 
 		struct Deducation
 		{
@@ -123,6 +122,5 @@ namespace MFST
 
 		bool savededucation();
 	};
-	void SolveAllProblems();
 }
 

@@ -64,7 +64,7 @@ namespace ERROR
 		ERROR_ENTRY(111, "Inapropprite symbol in a source code file (-in)"),
 		ERROR_ENTRY(112, "Failed to create log file (-log)"),
 		ERROR_ENTRY(113, "Failed to create out file (-out)"),
-		ERROR_ENTRY(114,"Log file creation impossible"),
+		ERROR_ENTRY(114,"Log file creation impossible.It can't be named as -in file"),
 		ERROR_ENTRY_NODEF(115),
 		ERROR_ENTRY_NODEF(116),
 		ERROR_ENTRY_NODEF(117),

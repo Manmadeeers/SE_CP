@@ -16,6 +16,7 @@ namespace PARM
 		wchar_t in[PARM_MAX_SIZE];
 		wchar_t out[PARM_MAX_SIZE];
 		wchar_t log[PARM_MAX_SIZE];
+		bool hasDebug = false;
 	};
 
 	PARM getparm(int argc, _TCHAR* ragv[]);//form PARM structure based on main function parametres
