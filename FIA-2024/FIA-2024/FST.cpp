@@ -81,6 +81,7 @@ namespace FST
 
 	char FiniteAutomats(unsigned char* word) {
 
+
 		if (word[0] == ' ' || word[0] == '\0' || word[0] == '|') {
 			return LEX_SKIP;
 		}
@@ -610,6 +611,7 @@ namespace FST
 	}
 
 	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in) {
+		int main_counter = 0;
 		stack<char*>scope;
 		const char* Literal = "Literal";
 		int count_lines = 0;
@@ -641,7 +643,11 @@ namespace FST
 			LT::AddToLexTable(lextable, NewLex);
 
 			if (lexem == LEX_MAIN) {
+				main_counter++;
 				scope.push((char*)"Main");
+			}
+			if (main_counter > 1) {
+				throw ERROR_THROW(94);
 			}
 			int gap_front = 1;
 			if (lexem == LEX_DATATYPE) {
@@ -688,6 +694,9 @@ namespace FST
 						}
 						//NewId.scope = scope.top();
 						NewId.scope = scope.top();
+						if (IT::checkIDorFuncPresense(idtable, NewId)) {
+							throw ERROR_THROW_IN(702, count_lines, 0, (unsigned char*)"Fail");
+						}
 						IT::AddToIDTable(idtable, NewId);
 						done = true;
 						break;
@@ -702,6 +711,9 @@ namespace FST
 
 						if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
 							NewId.id = (char*)in.words[i + gap_front];
+							if (IT::checkIDorFuncPresense(idtable, NewId)) {
+								throw ERROR_THROW_IN(701, count_lines, 0, (unsigned char*)"Fail");
+							}
 							IT::AddToIDTable(idtable, NewId);
 							scope.push(NewId.id);
 							done = true;
@@ -712,7 +724,6 @@ namespace FST
 				continue;
 
 			}
-
 			else if (lexem == LEX_LITERAL) {
 				if (scope.empty()) {
 					throw ERROR_THROW(600);
@@ -752,7 +763,7 @@ namespace FST
 				//end of literal name forming
 
 				//if a symbol literal found(by quotation marks)
-				if (check_sym(in.words[i])) {
+				if (in.words[i][0] == (unsigned char)'\'') {
 					NewId.first_line_ID = count_lines;
 					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::SYM;
@@ -786,15 +797,41 @@ namespace FST
 				if (!(IT::CheckLiteralPresense(idtable, NewId))) {
 					NewId.scope = scope.top();
 					IT::AddToIDTable(idtable, NewId);
-					
 					count_literals++;
+				}
+				else {
+
 				}
 
 			}
+			if (lexem == LEX_ID) {
+				NewId.first_line_ID = count_lines;
+				NewId.id = (char*)in.words[i];
+				NewId.IDType = IT::V;
+				NewId.scope = scope.top();
+				if (in.words[i + 1][0] == '(') {
+					NewId.IDType = IT::F;
+				}
+				for (int k = 0; k < 3; k++) {
+					if (in.words[i + k][0] == ',' || in.words[i + k][0] == ')') {
+						NewId.IDType = IT::P;
+					}
+				}
+				if (NewId.IDType == IT::F && !IT::checkIDorFuncPresense(idtable, NewId)) {
+					throw ERROR_THROW_IN(703, count_lines, 0, (unsigned char*)"");
+				}
+				if (NewId.IDType == IT::V && !IT::checkIDorFuncPresense(idtable, NewId)) {
+					throw ERROR_THROW_IN(704, count_lines, 0, (unsigned char*)NewId.id);
+				}
+			}
+
 		}
 
 		for (short i = 0; i < scope.size(); i++) {
 			scope.pop();
+		}
+		if (main_counter == 0) {
+			throw ERROR_THROW(94);
 		}
 	}
 }

@@ -31,7 +31,7 @@ namespace ERROR
 			unsigned char* FailedText;
 		}err_spec;
 	};
-
+	void printArray();
 	Error geterror(int id);
 	Error geterrorin(int id, int line, int col, unsigned char* FailedText);
 }

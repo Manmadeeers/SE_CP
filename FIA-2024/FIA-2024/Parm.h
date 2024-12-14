@@ -3,6 +3,7 @@
 #define PARM_IN		L"-in:"					// source code file extenction
 #define PARM_OUT	L"-out:"				// object code file extenction
 #define PARM_LOG	L"-log:"				// log file extenction
+#define PARM_DEB	L"-debug"				//to print debug info
 
 #define PARM_MAX_SIZE	300					// max parametr length
 

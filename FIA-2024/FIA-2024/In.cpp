@@ -125,10 +125,10 @@ namespace In {
 					i += 2;
 				}
 
-				if (current_symbol == '+' && in_to_return.text[i + 1]) {
+			/*	if (current_symbol == '+' && in_to_return.text[i + 1]) {
 					words[count_words][count_symbols++] = in_to_return.text[i + 1];
 					i += 2;
-				}
+				}*/
 				if (current_symbol == ';' && in_to_return.text[i + 1] == ';') {
 					//throw ERROR_THROW(98);
 					i += 2;

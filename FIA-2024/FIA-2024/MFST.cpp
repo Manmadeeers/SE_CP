@@ -179,7 +179,7 @@ namespace MFST
         }
 
         case NS_NORULECHAIN: MFST_TRACE4("------>NS_NORULECHAIN") break;
-        case NS_ERROR: MFST_TRACE4("------>NS_ERROR") break;
+        case NS_ERROR: MFST_TRACE4("------>NS_ERROR");exit(600);
         case SURPRISE: MFST_TRACE4("------>NS_SURPRISE") break;
         }
         return rc;
@@ -219,6 +219,9 @@ namespace MFST
             ERROR::Error err = ERROR::geterror(errid);
             sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d,%s", err.id, lex.table[lpos].src_str_num, err.message);
             rc = buf;
+            cout << buf << endl;
+            throw ERROR_THROW(err.id);
+          
         }
         return rc;
     }

@@ -29,6 +29,27 @@ namespace LT {
 		return LexTableElem;
 	}
 
+	void PrintLexTable(LexTable LexTable) {
+		cout << endl << endl << "<-----Lexem table----->" << endl;
+		int store_prev = 0;
+		cout << "0" << store_prev << " ";
+		for (int i = 0; i < LexTable.size; i++) {
+			LT::Entry current = LT::GetEntry(LexTable, i);
+			if (current.src_str_num != store_prev) {
+				cout << endl;
+				if (current.src_str_num <= 9) {
+					cout << '0' << current.src_str_num << ' ';
+				}
+				else {
+					cout << current.src_str_num << ' ';
+				}
+			}
+			cout << current.lexem;
+			store_prev = current.src_str_num;
+
+		}
+	}
+
 	void DeleteLexTable(LexTable& LexTable) {
 		
 		delete[]LexTable.table;

@@ -1,14 +1,14 @@
 Test:  without errors 
 
 Test:  without errors 
----------- Protocol ---------- Date: 13.12.2024 11:08:06
+---------- Protocol ---------- Date: 14.12.2024 03:59:27
 ----------Parametres----------
 -in: FIA.txt
 -out: FIA.txt.out
 -log: FIA.txt.log
 ----------Entered info----------
-unt function func0( )|{|Write 0xFF;|return 0x00;|};||unt function func(unt acc, unt lec)|{|create unt num = 0x0A;|num >> 0x02;|num << 0x01;|until(a < 0x0A){acc = acc + lec;};|acc = acc + lec;|number = num + acc;|return num;|};||bool function func2(bool log)|{|WriteLine log;|return log;|};||Main|{|create unt x;|create unt y;|x = 0x01;|y = x;|create sym sa;|sa = 'A';|sb = 'b';|sc = 'b';|Write sa;|WriteLine y;|Write x;|create bool logic = True;|get_date();|get_time();|return 0x00;|};;
-Total amount of symbols: 486
+unt function func0( )|{|Write 0xFF;|return 0x00;|};|unt function func(unt acc, unt curr)|{|create unt num = 0x0F;|create sym Movement = 'B';|num >> 0x02;|num << Movement;|create unt a = 0x00;|until(a < 0xFA){acc=acc+curr;};|acc = acc + curr;|create unt number = num + acc;|number = number + 0x01;|return num;|};||bool function func2(bool log)|{||WriteLine log;|return log;|};||Main|{|create unt x;|create unt y;|x = 0x01;|y = x;|create sym sa;|sa = 'A';|create sym sb = 'b';|create sym sc = 'b';|Write sa;|WriteLine y;|Write x;|create bool logic = True;|return 0x00;|};;
+Total amount of symbols: 570
 Total amount of ignored symbols: 0
-Total amount of lines: 41
-untfunctionfunc0()|{|Write0xFF;|return0x00;|};||untfunctionfunc(untacc,untlec)|{|createuntnum=0x0A;|num>>0x02;|num<<0x01;|until(a<0x0A){acc=acc+ ec;};|acc=acc+ ec;|number=num+ cc;|returnnum;|};||boolfunctionfunc2(boollog)|{|WriteLinelog;|returnlog;|};||Main|{|createuntx;|createunty;|x=0x01;|y=x;|createsymsa;|sa='A';|sb='b';|sc='b';|Writesa;|WriteLiney;|Writex;|createboollogic=True;|get_date();|get_time();|return0x00;|};
+Total amount of lines: 42
+untfunctionfunc0()|{|Write0xFF;|return0x00;|};|untfunctionfunc(untacc,untcurr)|{|createuntnum=0x0F;|createsymMovement='B';|num>>0x02;|num<<Movement;|createunta=0x00;|until(a<0xFA){acc=acc+curr;};|acc=acc+curr;|createuntnumber=num+acc;|number=number+0x01;|returnnum;|};||boolfunctionfunc2(boollog)|{||WriteLinelog;|returnlog;|};||Main|{|createuntx;|createunty;|x=0x01;|y=x;|createsymsa;|sa='A';|createsymsb='b';|createsymsc='b';|Writesa;|WriteLiney;|Writex;|createboollogic=True;|return0x00;|};

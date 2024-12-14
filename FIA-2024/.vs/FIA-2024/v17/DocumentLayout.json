@@ -3,52 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Polish.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Polish.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FIA-2024.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\FIA-2024.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\LT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\MFST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Semantic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Semantic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -59,12 +15,64 @@
       "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\IT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Semantic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Semantic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FIA-2024.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\FIA-2024.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\IT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\LT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\LT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Polish.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\MFST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\GRB.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -79,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\FST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Parm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{10773C95-E9AE-4097-91FA-F59671465CEF}|FIA-2024\\FIA-2024.vcxproj|solutionrelative:FIA-2024\\Parm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -94,17 +98,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "stdafx.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\stdafx.h",
               "RelativeDocumentMoniker": "FIA-2024\\stdafx.h",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\stdafx.h",
               "RelativeToolTip": "FIA-2024\\stdafx.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-04T10:13:42.278Z",
               "IsPinned": true,
@@ -112,26 +116,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Rules.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Rules.h",
               "RelativeDocumentMoniker": "FIA-2024\\Rules.h",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Rules.h",
               "RelativeToolTip": "FIA-2024\\Rules.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABIAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-08T11:19:34.417Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "FIA-2024.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FIA-2024.cpp",
               "RelativeDocumentMoniker": "FIA-2024\\FIA-2024.cpp",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FIA-2024.cpp",
               "RelativeToolTip": "FIA-2024\\FIA-2024.cpp",
-              "ViewState": "AgIAALIAAAAAAAAAAAAAALsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-04T10:13:31.17Z",
               "IsPinned": true,
@@ -139,7 +144,150 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Semantic.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Semantic.cpp",
+              "RelativeDocumentMoniker": "FIA-2024\\Semantic.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Semantic.cpp",
+              "RelativeToolTip": "FIA-2024\\Semantic.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAawEsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-13T19:19:28.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Semantic.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Semantic.h",
+              "RelativeDocumentMoniker": "FIA-2024\\Semantic.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Semantic.h",
+              "RelativeToolTip": "FIA-2024\\Semantic.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-13T19:19:15.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LT.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.h",
+              "RelativeDocumentMoniker": "FIA-2024\\LT.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.h",
+              "RelativeToolTip": "FIA-2024\\LT.h",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-08T10:43:19.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FST.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FST.cpp",
+              "RelativeDocumentMoniker": "FIA-2024\\FST.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FST.cpp",
+              "RelativeToolTip": "FIA-2024\\FST.cpp",
+              "ViewState": "AgIAAAQDAAAAAAAAAAAcwCIDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T10:50:17.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IT.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.cpp",
+              "RelativeDocumentMoniker": "FIA-2024\\IT.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.cpp",
+              "RelativeToolTip": "FIA-2024\\IT.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAFEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T10:51:05.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "IT.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.h",
+              "RelativeDocumentMoniker": "FIA-2024\\IT.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.h",
+              "RelativeToolTip": "FIA-2024\\IT.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-08T10:50:39.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Error.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.cpp",
+              "RelativeDocumentMoniker": "FIA-2024\\Error.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.cpp",
+              "RelativeToolTip": "FIA-2024\\Error.cpp",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T10:27:13.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "In.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.cpp",
+              "RelativeDocumentMoniker": "FIA-2024\\In.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.cpp",
+              "RelativeToolTip": "FIA-2024\\In.cpp",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T10:24:59.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "In.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.h",
+              "RelativeDocumentMoniker": "FIA-2024\\In.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.h",
+              "RelativeToolTip": "FIA-2024\\In.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-13T19:36:49.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LT.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.cpp",
+              "RelativeDocumentMoniker": "FIA-2024\\LT.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.cpp",
+              "RelativeToolTip": "FIA-2024\\LT.cpp",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwB8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T10:43:54.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Polish.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.h",
+              "RelativeDocumentMoniker": "FIA-2024\\Polish.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.h",
+              "RelativeToolTip": "FIA-2024\\Polish.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-12T17:16:47.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Log.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Log.cpp",
               "RelativeDocumentMoniker": "FIA-2024\\Log.cpp",
@@ -147,85 +295,36 @@
               "RelativeToolTip": "FIA-2024\\Log.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-12T17:19:53.489Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Polish.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.cpp",
-              "RelativeDocumentMoniker": "FIA-2024\\Polish.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.cpp",
-              "RelativeToolTip": "FIA-2024\\Polish.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-12T17:17:15.021Z",
+              "WhenOpened": "2024-12-12T17:19:53.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Polish.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.h",
-              "RelativeDocumentMoniker": "FIA-2024\\Polish.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Polish.h",
-              "RelativeToolTip": "FIA-2024\\Polish.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-12T17:16:47.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Error.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.cpp",
-              "RelativeDocumentMoniker": "FIA-2024\\Error.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.cpp",
-              "RelativeToolTip": "FIA-2024\\Error.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-08T10:27:13.06Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "MFST.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.cpp",
               "RelativeDocumentMoniker": "FIA-2024\\MFST.cpp",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.cpp",
               "RelativeToolTip": "FIA-2024\\MFST.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAAAPsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-11T21:12:56.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "MFST.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.h",
               "RelativeDocumentMoniker": "FIA-2024\\MFST.h",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\MFST.h",
               "RelativeToolTip": "FIA-2024\\MFST.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-11T21:20:49.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "In.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.cpp",
-              "RelativeDocumentMoniker": "FIA-2024\\In.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.cpp",
-              "RelativeToolTip": "FIA-2024\\In.cpp",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAAAKsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-08T10:24:59.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "GRB.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\GRB.h",
               "RelativeDocumentMoniker": "FIA-2024\\GRB.h",
@@ -237,80 +336,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LT.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.h",
-              "RelativeDocumentMoniker": "FIA-2024\\LT.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.h",
-              "RelativeToolTip": "FIA-2024\\LT.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-08T10:43:19.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FST.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FST.cpp",
-              "RelativeDocumentMoniker": "FIA-2024\\FST.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FST.cpp",
-              "RelativeToolTip": "FIA-2024\\FST.cpp",
-              "ViewState": "AgIAALYCAAAAAAAAAAAAANECAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-08T10:50:17.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "In.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.h",
-              "RelativeDocumentMoniker": "FIA-2024\\In.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\In.h",
-              "RelativeToolTip": "FIA-2024\\In.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-11T20:33:27.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IT.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.cpp",
-              "RelativeDocumentMoniker": "FIA-2024\\IT.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.cpp",
-              "RelativeToolTip": "FIA-2024\\IT.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAD0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-08T10:51:05.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LT.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.cpp",
-              "RelativeDocumentMoniker": "FIA-2024\\LT.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\LT.cpp",
-              "RelativeToolTip": "FIA-2024\\LT.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-08T10:43:54.862Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IT.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.h",
-              "RelativeDocumentMoniker": "FIA-2024\\IT.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\IT.h",
-              "RelativeToolTip": "FIA-2024\\IT.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-08T10:50:39.664Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "Error.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.h",
+              "RelativeDocumentMoniker": "FIA-2024\\Error.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.h",
+              "RelativeToolTip": "FIA-2024\\Error.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-08T10:25:45.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "GRB.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\GRB.cpp",
               "RelativeDocumentMoniker": "FIA-2024\\GRB.cpp",
@@ -322,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "FST.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\FST.h",
               "RelativeDocumentMoniker": "FIA-2024\\FST.h",
@@ -334,19 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Error.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.h",
-              "RelativeDocumentMoniker": "FIA-2024\\Error.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Error.h",
-              "RelativeToolTip": "FIA-2024\\Error.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-08T10:25:45.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Parm.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\SE_CP\\FIA-2024\\FIA-2024\\Parm.cpp",
               "RelativeDocumentMoniker": "FIA-2024\\Parm.cpp",

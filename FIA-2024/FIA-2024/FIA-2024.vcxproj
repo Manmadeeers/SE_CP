@@ -139,6 +139,7 @@
     <ClCompile Include="Out.cpp" />
     <ClCompile Include="Parm.cpp" />
     <ClCompile Include="Polish.cpp" />
+    <ClCompile Include="Semantic.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="Parm.h" />
     <ClInclude Include="Polish.h" />
     <ClInclude Include="Rules.h" />
+    <ClInclude Include="Semantic.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

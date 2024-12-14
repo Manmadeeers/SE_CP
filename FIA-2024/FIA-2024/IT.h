@@ -33,6 +33,8 @@ namespace IT {
 	void AddToIDTable(IDTable& idtable, Entry entry);
 	Entry GetEntry(IDTable& idtable, int str_num);
 	int IsId(IDTable& idtable, char id[ID_MAXSIZE]);
+	void PrintIdTable(IDTable IDTable);
 	void DeleteIdTable(IDTable& idtable);
 	bool CheckLiteralPresense(IDTable idtable, Entry ID);
+	bool checkIDorFuncPresense(IDTable table, Entry id);
 }

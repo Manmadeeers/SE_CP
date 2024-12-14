@@ -16,6 +16,7 @@
 #include <map>
 #include <set>
 #include <string>
+#include <queue>
 
 
 #include "In.h"
@@ -27,6 +28,7 @@
 #include "FST.h"
 #include "IT.h"
 #include "Polish.h"
+#include "Semantic.h"
 //#include "GRB.h"
 //#include "MFST.h"
 using namespace std;

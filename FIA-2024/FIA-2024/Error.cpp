@@ -5,8 +5,8 @@ namespace ERROR
 	// 100 - 109 - ошибки параметров//parameter erors
 	// 110 - 119 - ошибки открытия и чтения файлов/file open and read erors
 
-    Error errors[ERROR_MAX_ENTRY] = //list of errors
-    {
+	Error errors[ERROR_MAX_ENTRY] = //list of errors
+	{
 		ERROR_ENTRY(0, "Inapropriate error code"),
 		ERROR_ENTRY(1, "System error"),
 		ERROR_ENTRY(2,"Not enough parametres set"),
@@ -42,12 +42,11 @@ namespace ERROR
 		ERROR_ENTRY(91, "Lexical analyser: string literal is longer then possible"),
 		ERROR_ENTRY(92, "Lexical analyser: string literal was not determined"),
 		ERROR_ENTRY(93, "Lexical analyser: identifier was not determined"),
-		ERROR_ENTRY(94, "Lexical analyser: more then one main function found"),
+		ERROR_ENTRY(94, "Lexical analyser: more then one or none main functions found"),
 		ERROR_ENTRY(95, "Lexical analyser: function was determined more than once"),
 		ERROR_ENTRY(96, "Lexical analyser: variable was declared more than once"),
 		ERROR_ENTRY(97, "Lexical analyser: unknown variable"),
 		ERROR_ENTRY(98,"Lexical analyser: punktuation mistakes"),
-		ERROR_ENTRY_NODEF(98),
 		ERROR_ENTRY_NODEF(99),
 
 		//
@@ -89,26 +88,59 @@ namespace ERROR
 		ERROR_ENTRY_NODEF100(500),
 
 		//syntax analyser errors
-		ERROR_ENTRY(600,"Incorrect program structure"),
-		ERROR_ENTRY(601,"Incorrect identifier, ley word usage or punktuation"),
+		ERROR_ENTRY(600,"Incorrect syntax in some program significant elements"),
+		ERROR_ENTRY(601,"Incorrect identifier, key word usage or punktuation"),
 		ERROR_ENTRY(602,"Incorrect expression"),
 		ERROR_ENTRY(603,"Incorrect expression as function parametres"),
-		ERROR_ENTRY(604,"Incorrect function parametres"),
+		ERROR_ENTRY(604,"Incorrect syntax in the begining of a function"),
 		ERROR_ENTRY(605,"Incorrect math function or operator or it's usage"),
 		ERROR_ENTRY(606,"Incorrect loop exit condition"),
-		ERROR_ENTRY(607,"Incorrect parametres in function that doesn't take any"),
-
-		ERROR_ENTRY_NODEF100(700),
-
+		ERROR_ENTRY(607,"Incorrect syntax in loop or function parametres"),
+		ERROR_ENTRY_NODEF(608),
+		ERROR_ENTRY_NODEF(609),
+		ERROR_ENTRY_NODEF10(610),
+		ERROR_ENTRY_NODEF10(620),
+		ERROR_ENTRY_NODEF10(630),
+		ERROR_ENTRY_NODEF10(640),
+		ERROR_ENTRY_NODEF10(650),
+		ERROR_ENTRY_NODEF10(660),
+		ERROR_ENTRY_NODEF10(670),
+		ERROR_ENTRY_NODEF10(680),
+		ERROR_ENTRY_NODEF10(690),
+		ERROR_ENTRY(700,"Semantic analyser: Identifier is similar with a key word"),
+		ERROR_ENTRY(701, "Semantic analyser: Two identical function names were spoted"),
+		ERROR_ENTRY(702, "Semantic analyser: Two identical variable names were spoted"),
+		ERROR_ENTRY(703,"Semantic analyser: Function is being used without being initialized"),
+		ERROR_ENTRY(704,"Semantic analyser: Variable is being used without being initialized"),
+		ERROR_ENTRY(705,"Semantic analyser: Invalid value for shift operation"),
+		ERROR_ENTRY(706,"Semantic analyser: Invalid function parametres"),
+		ERROR_ENTRY(707,"Semantic analyser: Function takes more parametres then possible"),
+		ERROR_ENTRY(708,"Semantic analyser: Invalid type of an operation"),
+		ERROR_ENTRY_NODEF(709),
+		ERROR_ENTRY_NODEF10(710),
+		ERROR_ENTRY_NODEF10(720),
+		ERROR_ENTRY_NODEF10(730),
+		ERROR_ENTRY_NODEF10(740),
+		ERROR_ENTRY_NODEF10(750),
+		ERROR_ENTRY_NODEF10(760),
+		ERROR_ENTRY_NODEF10(770),
+		ERROR_ENTRY_NODEF10(780),
+		ERROR_ENTRY_NODEF10(790),
 		ERROR_ENTRY_NODEF100(800)
 		
     };
+	void printArray() {
+		for (int i = 0; i <ERROR_MAX_ENTRY; i++) {
+			cout << i + 1 << errors[i].message << endl;
+		}
+	}
 
 	Error geterror(int id) //function for common general errors
 	{
 		if (id < 1 || id >= ERROR_MAX_ENTRY) {//if there is an unexpected error
 			return errors[0];//throw an error for an unexpected error
 		}
+		cout<<endl << errors[id].id << ": " << errors[id].message << endl;
 		return errors[id];//if an eror in expected throw an eror suitable for a situation
 	}
 	Error geterrorin(int id, int line = -1, int col = -1, unsigned char* FailedText = (unsigned char*)"")//function to throw a specified error
@@ -120,6 +152,7 @@ namespace ERROR
 		errors[id].err_spec.col = col;
 		errors[id].err_spec.line = line;
 		errors[id].err_spec.FailedText = FailedText;
+		cout << endl << errors[id].id << ": " << errors[id].message << ". Line " << errors[id].err_spec.line<<" ("<<errors[id].err_spec.FailedText<<")" << endl;
 		return errors[id];
 	}
 }

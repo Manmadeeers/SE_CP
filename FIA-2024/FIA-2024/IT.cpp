@@ -40,6 +40,7 @@ namespace IT {
 		
 		for (int i = 0; i < idtable.size; i++) {
 			Entry current = idtable.table[i];
+			
 			if (id_type == UNT&&current.IDDataType==UNT&&current.IDType==IT::L) {
 				int iterator = 0;
 				bool equal = true;
@@ -69,6 +70,82 @@ namespace IT {
 			}
 		}
 		return false;
+	}
+
+	bool checkIDorFuncPresense(IDTable table, Entry id) {
+
+		for (int i = 0; i < table.size; i++) {
+			Entry current = table.table[i];
+			if (id.IDType==IT::F) {
+				if (current.IDType == IT::F) {
+					if (strcmp(id.id, current.id) == 0) {
+						return true;
+					}
+				}
+			
+			}
+			else if (id.IDType == IT::V) {
+				if (current.IDType == IT::V || current.IDType == IT::P) {
+					if (current.scope == id.scope) {
+						if (strcmp(id.id, current.id) == 0) {
+							return true;
+						}
+					}
+				}
+			}
+		}
+		return false;
+
+	}
+
+	void PrintIdTable(IDTable IDTable) {
+		cout << "<-----Identifier table----->" << endl;
+		cout << "Identifier data types: " << "1 - UNT   2 - SYM   3 - BOOL" << endl;
+		cout << "Identifier types: " << "1-Variable   2-Function   3-Parametres   4-Literal(sym, unt or bool)" << endl << endl;
+
+
+		cout << " ¹" << '\t' << "Identifier" << '\t' << '\t' << "Data type" << '\t' << '\t' << "Identifier type" << "\t\t" << "Scope" << endl;
+		for (int i = 0; i < IDTable.size; i++) {
+			IT::Entry current = IDTable.table[i];
+			if (current.first_line_ID <= 9) {
+				if (current.IDType == IT::L) {
+					if (current.IDDataType == IT::UNT) {
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val << " ) " << "\t\t" << current.scope << endl;
+					}
+					else if (current.IDDataType == IT::BOO) {
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.bool_val << " ) " << "\t\t" << current.scope << endl;
+					}
+
+					else {
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val << " )" << "\t\t\t" << current.scope << endl;
+					}
+
+				}
+				else {
+					cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << "\t\t\t" << current.scope << endl;
+				}
+
+			}
+			else {
+				if (current.IDType == IT::L) {
+					if (current.IDDataType == IT::UNT) {
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.unt_val << " )" << "\t\t" << current.scope << endl;
+					}
+					else if (current.IDDataType == IT::BOO) {
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.bool_val << " )" << "\t\t" << current.scope << endl;
+					}
+
+					else {
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.sym_val << " )" << "\t\t\t" << current.scope << endl;
+					}
+
+				}
+				else {
+					cout << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << "\t\t\t" << current.scope << endl;
+				}
+			}
+
+		}
 	}
 
 	void DeleteIdTable(IDTable& idtable) {
